@@ -19,7 +19,7 @@
 "tags": "",
 "keywords": "about",
 "url": "about.html",
-"summary": "About me"
+"summary": ""
 }
 ,
 
@@ -31,6 +31,17 @@
 "keywords": "HOMEPAGE",
 "url": "index.html",
 "summary": "These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll."
+}
+,
+
+
+
+{
+"title": "Sample 1 Topic (Product 1)",
+"tags": "",
+"keywords": "sample",
+"url": "p1_sample20.html",
+"summary": "This is just a sample topic..."
 }
 ,
 

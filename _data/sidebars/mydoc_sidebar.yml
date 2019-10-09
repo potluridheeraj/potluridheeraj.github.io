@@ -21,7 +21,7 @@ entries:
   - title: Home
     output: web, pdf
     folderitems:
-
+    
     - title: Home
       url: /index.html
       output: web, pdf

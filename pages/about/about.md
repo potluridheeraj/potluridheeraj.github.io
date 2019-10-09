@@ -1,18 +1,15 @@
 ---
 title: About
 keywords: about
-summary: "About me"
-sidebar: about
+#summary: "DHEERAJ POTLURI"
+sidebar: 
 permalink: about.html
 folder: about
 ---
-
-DHEERAJ POTLURI
-
-dheerajpotluri92@gmail.com
-
+# DHEERAJ POTLURI
 
 Willingness to learn, comprehensive problem solving skills, strong leadership abilities and hard worker.
+
 
 ## EDUCATION
 George Mason University, Fairfax, Virginia	
@@ -60,3 +57,6 @@ Robotics Project Lead									April 2012- 2013
    * Design the robot and check if they are in line with the requirements. 
    * Drove the team through remodeling the design to meet the requirements when necessary. 
    * Implementing the design through coding, different coding methods were employed to get/observe optimum results. Directed the team through troubleshooting the project.  
+
+## E-mail
+    Dheerajpotluri92@gmail.com
