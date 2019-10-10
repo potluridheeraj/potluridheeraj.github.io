@@ -31,11 +31,11 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: About Consul
+    - title: About consul
       url: /consul.html
       output: web, pdf
     
-    - title: cheat sheet
+    - title: Cheat sheet
       url: /consul_cheat_sheet.html
       output: web, pdf
   
@@ -51,6 +51,6 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: about
+    - title: About
       url: /about.html
       output: web, pdf

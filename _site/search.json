@@ -74,7 +74,7 @@
 "tags": "",
 "keywords": "HOMEPAGE",
 "url": "index.html",
-"summary": ""
+"summary": "This is a website to maintain and track my progress and have quick look back notes for the future. I use it this a referance to reuse the concepts in the future"
 }
 ,
 
@@ -361,6 +361,17 @@
 "keywords": "sample",
 "url": "p2_sample9.html",
 "summary": "This is just a sample topic..."
+}
+,
+
+
+
+{
+"title": "Reference",
+"tags": "",
+"keywords": "reference",
+"url": "reference.html",
+"summary": "These are the most of my reference from where i got most of my information while i am learning new things"
 }
 ,
 
