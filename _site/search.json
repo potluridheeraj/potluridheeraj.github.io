@@ -18,7 +18,7 @@
 "title": "About",
 "tags": "",
 "keywords": "about",
-"url": "about.html",
+"url": "landing_page.html",
 "summary": ""
 }
 ,
@@ -26,11 +26,55 @@
 
 
 {
-"title": "Dheeraj Potluri",
+"title": "Consul cheet sheet",
+"tags": "",
+"keywords": "consul cheet sheet",
+"url": "consul_cheat_sheet.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Consul",
+"tags": "",
+"keywords": "consul",
+"url": "consul.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Consul Installation script",
+"tags": "",
+"keywords": "consul,install, consul install",
+"url": "consul_install.html",
+"summary": "Installing consul in your machine"
+}
+,
+
+
+
+{
+"title": "Consul",
+"tags": "",
+"keywords": "consul",
+"url": "consul_landing_page.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
 "tags": "",
 "keywords": "HOMEPAGE",
 "url": "index.html",
-"summary": "These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll."
+"summary": ""
 }
 ,
 

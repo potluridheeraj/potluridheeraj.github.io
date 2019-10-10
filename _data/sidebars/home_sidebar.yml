@@ -2,7 +2,7 @@
 
 entries:
 - title: sidebar
-  product: Learn
+  product: 
   folders:
 
   - title:
@@ -32,7 +32,19 @@ entries:
     folderitems:
 
     - title: About Consul
-      url: /about_consul.html
+      url: /consul.html
+      output: web, pdf
+    
+    - title: cheat sheet
+      url: /consul_cheat_sheet.html
+      output: web, pdf
+  
+  - title: Docker
+    output: web, pdf
+    folderitems:
+
+    - title: About Docker
+      url: /docker.html
       output: web, pdf
 
   - title: About

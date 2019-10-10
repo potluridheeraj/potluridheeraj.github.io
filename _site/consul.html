@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>Publishing pages | dp</title>
+<meta name="keywords" content=" consul">
+<title>Consul | dp</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -132,7 +132,7 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a href="consul.html">Consul</a></li>
+                        <li class="dropdownActive"><a href="consul.html">Consul</a></li>
                         
                         
                         
@@ -161,7 +161,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Publishing pages">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Consul">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -187,27 +187,9 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">Learn </li>
+  <li class="sidebarTitle"> </li>
   
   
-  
-      
-  
-  <li>
-      <a title="Home" href="#">Home</a>
-      <ul>
-          
-          
-          
-          <li><a title="Home" href="index.html">Home</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
   
   <li>
       <a title="Consul" href="#">Consul</a>
@@ -215,7 +197,28 @@
           
           
           
-          <li><a title="About Consul" href="about_consul.html">About Consul</a></li>
+          <li class="active"><a title="Home" href="consul.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul pre-requisites" href="consul_prerequisites.html">Consul pre-requisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install and configure consul" href="consul_install_configure_consul.html">Install and configure consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul entire installation sctipt" href="consul_install.html">Consul entire installation sctipt</a></li>
           
           
           
@@ -226,12 +229,28 @@
       
   
   <li>
-      <a title="About" href="#">About</a>
+      <a title="Service Regestration" href="#">Service Regestration</a>
       <ul>
           
           
           
-          <li><a title="about" href="about.html">about</a></li>
+          <li><a title="Nginx" href="nginx.html">Nginx</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Cheat Sheet" href="#">Cheat Sheet</a>
+      <ul>
+          
+          
+          
+          <li><a title="Cheat sheet" href="consul_cheat_sheet.html">Cheat sheet</a></li>
           
           
           
@@ -258,7 +277,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Publishing pages</h1>
+   <h1 class="post-title-main">Consul</h1>
 </div>
 
 
@@ -295,126 +314,35 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">publishing</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
+   <h2 id="service-mesh-made-easy">Service Mesh Made Easy</h2>
+<p>A distributed networking layer to connect, secure and observe services across any runtime platform and public or private cloud.</p>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+<p>Consul Service Mesh Architecture:
+ Consul has a client-server architecture and is the “control plane” for the service mesh. Multiple servers are deployed for high availability, and a pool of clients run on every host. Clients integrate with sidecar proxies, such as Envoy, that provide the “data plane” for the service mesh.</p>
 
-   </tbody>
-</table>
+<p>The centralized servers hold the service registry, access and traffic policies, configurations and certificate authorities, which are efficiently transferred to the distributed clients in real time. The clients configure local proxies, cache data and policies, and provide health checking.</p>
 
+<h2 id="service-discovery-made-easy">Service Discovery Made Easy</h2>
+
+<p>Service registry, integrated health checks, and DNS and HTTP interfaces enable any service to discover and be discovered by other services</p>
+
+<ul>
+  <li>Service discovery for connectivity to remove manual processes</li>
+  <li>Service discovery for dynamic infrastructure.</li>
+  <li>Improve productivity by reducing lead time of connecting services from weeks to seconds without operator intervention.</li>
+  <li>Reduce cost by eliminating the need for east-west load balancers to connect services</li>
+  <li>Reduce risk by lowering the probability of downtime introduced when managing and updating load balancers</li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>pre-requisites:</p>
+<ul>
+  <li><a href="https://www.vmware.com/">Vm ware</a> or <a href="https://www.virtualbox.org/">Virtualbox</a></li>
+  <li><a href="https://www.vagrantup.com/docs/installation/">Vagrant</a></li>
+</ul>
+
+<h1 id="next-to-install-consul"><a href="consul_install.html">Next: To install consul</a></h1>
 
 
     <div class="tags">
