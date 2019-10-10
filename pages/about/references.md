@@ -8,7 +8,7 @@ folder: about
 ---
 
 Theam :
-https://idratherbewriting.com/documentation-theme-jekyll/index.html
+- https://idratherbewriting.com/documentation-theme-jekyll/index.html
 
 Consul :
 - https://www.consul.io/
