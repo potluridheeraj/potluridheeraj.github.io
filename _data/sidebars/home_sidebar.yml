@@ -36,7 +36,7 @@ entries:
       output: web, pdf
     
     - title: Cheat sheet
-      url: /consul_cheat_sheet.html
+      url: /consul_sheet.html
       output: web, pdf
   
   - title: Docker
@@ -46,7 +46,15 @@ entries:
     - title: About Docker
       url: /docker.html
       output: web, pdf
+  
+  - title: Github
+    output: web, pdf
+    folderitems:
 
+    - title: Cheat sheet
+      url: /github_sheet.html
+      output: web, pdf
+  
   - title: About
     output: web, pdf
     folderitems:

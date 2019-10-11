@@ -39,6 +39,6 @@ entries:
 
     folderitems:
     - title: Cheat sheet 
-      url: /consul_cheat_sheet.html
+      url: /consul_sheet.html
       output: web, pdf
 

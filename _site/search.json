@@ -29,7 +29,7 @@
 "title": "Consul cheet sheet",
 "tags": "",
 "keywords": "consul cheet sheet",
-"url": "consul_cheat_sheet.html",
+"url": "consul_sheet.html",
 "summary": ""
 }
 ,
@@ -70,7 +70,18 @@
 
 
 {
-"title": "",
+"title": "Github Cheetsheet",
+"tags": "",
+"keywords": "Cheetsheet",
+"url": "github_sheet.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Home",
 "tags": "",
 "keywords": "HOMEPAGE",
 "url": "index.html",
