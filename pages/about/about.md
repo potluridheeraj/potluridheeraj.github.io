@@ -21,6 +21,8 @@ Bachelor of Technology, Electrical and Computer Engineering
 ## WORK EXPERIENCE
 
 IT application Consultant (SAP SuccessFactors, Inc.)
+   * Developed hashicorp consul for service mesh across datacenters.
+   * Bulit multipe cookbooks for different inhouse projects.
    * Development of Inspec controls for in home products. 
    * Server validation tool development for DataCenters
    * Test the implementation changes.
@@ -36,7 +38,7 @@ Ethical Hacking and Countermeasures
     Programming Languages   : C, Ruby, Bash 
     Databases               : Oracle, mssql server, mysql
     Operating Systems       : Windows, Linux, UNIX, VMWARE, Backtrack
-    Packages                : Docker, Chef, Inspec, Jenkins, Git
+    Packages                : Docker, Chef, Inspec, Jenkins, Git, Terraform, Consul
 
 
 ## ACADEMIC PROJECTS:
