@@ -549,64 +549,52 @@ See where Git is located: which git</p>
     <tr>
       <th>Description</th>
       <th>Command</th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>True merge (fast forward):</td>
       <td>git merge branchname</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Merge to master (only if fast forward):</td>
       <td>git merge –ff-only branchname</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Merge to master (force a new commit):</td>
       <td>git merge –no-ff branchname</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Stop merge (in case of conflicts):</td>
       <td>git merge –abort</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Stop merge (in case of conflicts):</td>
       <td>git reset –merge // prior to v1.7.4</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Undo local merge that hasn’t been pushed yet:</td>
       <td>git reset –hard origin/master</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Merge only one specific commit:</td>
       <td>git cherry-pick 073791e7</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Rebase:</td>
-      <td>git checkout branchname » git rebase master or:</td>
-      <td>git merge master branchname (The rebase moves all of the commits in master onto the tip of branchname.)</td>
+      <td>git checkout branchname » git rebase master or: git merge master branchname (The rebase moves all of the commits in master onto the tip of branchname.)</td>
     </tr>
     <tr>
       <td>Cancel rebase:</td>
       <td>git rebase –abort</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Squash multiple commits into one:</td>
       <td>git rebase -i HEAD~3 (source)</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Squash-merge a feature branch (as one commit):</td>
       <td>git merge –squash branchname (commit afterwards)</td>
-      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -766,94 +754,76 @@ See where Git is located: which git</p>
     <tr>
       <th>Description</th>
       <th>Command</th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Compare modified files:</td>
       <td>git diff</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Compare modified files and highlight changes only:</td>
       <td>git diff –color-words index.html</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Compare modified files within the staging area:</td>
       <td>git diff –staged</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Compare branches:</td>
       <td>git diff master..branchname</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Compare branches like above:</td>
       <td>git diff –color-words master..branchname^</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Compare commits:</td>
       <td>git diff 6eb715d git diff 6eb715d..HEAD git diff 6eb715d..537a09f</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Compare commits of file:</td>
       <td>git diff 6eb715d index.html git diff 6eb715d..537a09f index.html</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Compare without caring about spaces:</td>
-      <td>git diff -b 6eb715d..HEAD or:</td>
-      <td>git diff –ignore-space-change 6eb715d..HEAD</td>
+      <td>git diff -b 6eb715d..HEAD or:git diff –ignore-space-change 6eb715d..HEAD</td>
     </tr>
     <tr>
       <td>Compare without caring about all spaces:</td>
-      <td>git diff -w 6eb715d..HEAD or:</td>
-      <td>git diff –ignore-all-space 6eb715d..HEAD</td>
+      <td>git diff -w 6eb715d..HEAD or: git diff –ignore-all-space 6eb715d..HEAD</td>
     </tr>
     <tr>
       <td>Useful comparings:</td>
       <td>git diff –stat –summary 6eb715d..HEAD</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Blame:</td>
       <td>git blame -L10,+1 index.html</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Releases &amp; Version Tags</td>
-      <td> </td>
       <td> </td>
     </tr>
     <tr>
       <td>Show all released versions:</td>
       <td>git tag</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Show all released versions with comments:</td>
       <td>git tag -l -n1</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Create release version:</td>
       <td>git tag v1.0.0</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Create release version with comment:</td>
       <td>git tag -a v1.0.0 -m ‘Message’</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Checkout a specific release version:</td>
       <td>git checkout v1.0.0</td>
-      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -865,171 +835,99 @@ See where Git is located: which git</p>
     <tr>
       <th>Description</th>
       <th>Command</th>
-      <th> </th>
-      <th> </th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Show remote:</td>
       <td>git remote</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Show remote details:</td>
       <td>git remote -v</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Add remote upstream from GitHub project:</td>
-      <td>git remote add upstream https:</td>
-      <td>//github.com/user/project.git</td>
-      <td> </td>
-      <td> </td>
+      <td>git remote add upstream https://github.com/user/project.git</td>
     </tr>
     <tr>
       <td>Add remote upstream from existing empty project on server:</td>
-      <td>git remote add upstream ssh:</td>
-      <td>//root@123.123.123.123/path/to/repository/.git</td>
-      <td> </td>
-      <td> </td>
+      <td>git remote add upstream ssh://root@123.123.123.123/path/to/repository/.git</td>
     </tr>
     <tr>
       <td>Fetch:</td>
       <td>git fetch upstream</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Fetch a custom branch:</td>
-      <td>git fetch upstream branchname:</td>
-      <td>local_branchname</td>
-      <td> </td>
-      <td> </td>
+      <td>git fetch upstream branchname:local_branchname</td>
     </tr>
     <tr>
       <td>Merge fetched commits:</td>
       <td>git merge upstream/master</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Remove origin:</td>
       <td>git remote rm origin</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Show remote branches:</td>
       <td>git branch -r</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Show all branches (remote and local):</td>
       <td>git branch -a</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Create and checkout branch from a remote branch:</td>
       <td>git checkout -b local_branchname upstream/remote_branchname</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Compare:</td>
       <td>git diff origin/master..master</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Push (set default with -u):</td>
       <td>git push -u origin master</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Push:</td>
       <td>git push origin master</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Force-Push:</td>
       <td>`git push origin master –force</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Pull:</td>
       <td>git pull</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
       <td>Pull specific branch:</td>
       <td>git pull origin branchname</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
-      <td>Fetch a pull request on GitHub by its ID and create a new branch:</td>
-      <td>git fetch upstream pull/ID/head:</td>
-      <td>new-pr-branch</td>
-      <td> </td>
+      <td>Fetch a pull request on GitHub by its ID and create a new branch: git fetch upstream pull/ID/head:new-pr-branch</td>
       <td> </td>
     </tr>
     <tr>
       <td>Clone to localhost:</td>
-      <td>git clone https:</td>
-      <td>//github.com/user/project.git or:</td>
-      <td>git clone ssh:</td>
-      <td>//user@domain.com/~/dir/.git</td>
+      <td>git clone https://github.com/user/project.git or: git clone ssh://user@domain.com/~/dir/.git</td>
     </tr>
     <tr>
       <td>Clone to localhost folder:</td>
-      <td>git clone https:</td>
-      <td>//github.com/user/project.git ~/dir/folder</td>
-      <td> </td>
-      <td> </td>
+      <td>git clone https://github.com/user/project.git ~/dir/folder</td>
     </tr>
     <tr>
       <td>Clone specific branch to localhost:</td>
-      <td>git clone -b branchname https:</td>
-      <td>//github.com/user/project.git</td>
-      <td> </td>
-      <td> </td>
+      <td>git clone -b branchname https://github.com/user/project.git</td>
     </tr>
     <tr>
       <td>Clone with token authentication (in CI environment):</td>
-      <td>git clone https:</td>
-      <td>//oauth2:</td>
-      <td><token>@gitlab.com/username/repo.git</token></td>
-      <td> </td>
+      <td>git clone https://oauth2:<token>@gitlab.com/username/repo.git</token></td>
     </tr>
     <tr>
-      <td>Delete remote branch (push nothing):</td>
-      <td>git push origin :</td>
-      <td>branchname or:</td>
-      <td>git push origin –delete branchname</td>
+      <td>Delete remote branch (push nothing): git push origin :branchname or:git push origin –delete branchname</td>
       <td> </td>
     </tr>
   </tbody>
@@ -1063,14 +961,12 @@ See where Git is located: which git</p>
     <tr>
       <th>Description</th>
       <th>Command</th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Ignore files that have already been committed to a Git repository:</td>
-      <td>http:</td>
-      <td>//stackoverflow.com/a/1139797/1815847</td>
+      <td>http://stackoverflow.com/a/1139797/1815847</td>
     </tr>
   </tbody>
 </table>
@@ -1082,16 +978,12 @@ See where Git is located: which git</p>
     <tr>
       <th>Description</th>
       <th>Command</th>
-      <th> </th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Hide Git on the web via .htaccess:</td>
-      <td>RedirectMatch 404 /.git (more info here:</td>
-      <td>http:</td>
-      <td>//stackoverflow.com/a/17916515/1815847)</td>
+      <td>RedirectMatch 404 /.git (more info here: http://stackoverflow.com/a/17916515/1815847)</td>
     </tr>
   </tbody>
 </table>
@@ -1103,24 +995,20 @@ See where Git is located: which git</p>
     <tr>
       <th>Description</th>
       <th>Command</th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Website:</td>
-      <td>https:</td>
-      <td>//git-lfs.github.com/</td>
+      <td>https://git-lfs.github.com/</td>
     </tr>
     <tr>
       <td>Install:</td>
       <td>brew install git-lfs</td>
-      <td> </td>
     </tr>
     <tr>
       <td>Track *.psd files:</td>
       <td>git lfs track “*.psd” (init, add, commit and push as written above)</td>
-      <td> </td>
     </tr>
   </tbody>
 </table>

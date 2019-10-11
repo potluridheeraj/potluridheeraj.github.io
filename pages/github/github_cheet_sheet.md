@@ -91,7 +91,7 @@ Help: git help
 | Stop merge (in case of conflicts): | git reset --merge // prior to v1.7.4 |
 | Undo local merge that hasn't been pushed yet: | git reset --hard origin/master |
 | Merge only one specific commit: | git cherry-pick 073791e7 |
-| Rebase: | git checkout branchname » git rebase master or: | git merge master branchname (The rebase moves all of the commits in master onto the tip of branchname.) |
+| Rebase: | git checkout branchname » git rebase master or: git merge master branchname (The rebase moves all of the commits in master onto the tip of branchname.) |
 | Cancel rebase: | git rebase --abort |
 | Squash multiple commits into one: | git rebase -i HEAD~3 (source) |
 | Squash-merge a feature branch (as one commit): | git merge --squash branchname (commit afterwards) |
@@ -148,8 +148,8 @@ Help: git help
 | Compare branches like above: | git diff --color-words master..branchname^ |
 | Compare commits: | git diff 6eb715d git diff 6eb715d..HEAD git diff 6eb715d..537a09f |
 | Compare commits of file: | git diff 6eb715d index.html git diff 6eb715d..537a09f index.html |
-| Compare without caring about spaces: | git diff -b 6eb715d..HEAD or: | git diff --ignore-space-change 6eb715d..HEAD |
-| Compare without caring about all spaces: | git diff -w 6eb715d..HEAD or: | git diff --ignore-all-space 6eb715d..HEAD |
+| Compare without caring about spaces: | git diff -b 6eb715d..HEAD or:git diff --ignore-space-change 6eb715d..HEAD |
+| Compare without caring about all spaces: | git diff -w 6eb715d..HEAD or: git diff --ignore-all-space 6eb715d..HEAD |
 | Useful comparings: | git diff --stat --summary 6eb715d..HEAD |
 | Blame: | git blame -L10,+1 index.html |
 | Releases & Version Tags |
@@ -165,10 +165,10 @@ Help: git help
 | ------- | -------- |
 | Show remote: | git remote |
 | Show remote details: | git remote -v |
-| Add remote upstream from GitHub project: | git remote add upstream https: |//github.com/user/project.git |
-| Add remote upstream from existing empty project on server: | git remote add upstream ssh: |//root@123.123.123.123/path/to/repository/.git |
+| Add remote upstream from GitHub project: | git remote add upstream https://github.com/user/project.git |
+| Add remote upstream from existing empty project on server: | git remote add upstream ssh://root@123.123.123.123/path/to/repository/.git |
 | Fetch: | git fetch upstream |
-| Fetch a custom branch: | git fetch upstream branchname: |local_branchname |
+| Fetch a custom branch: | git fetch upstream branchname:local_branchname |
 | Merge fetched commits: | git merge upstream/master |
 | Remove origin: | git remote rm origin |
 | Show remote branches: | git branch -r |
@@ -180,12 +180,12 @@ Help: git help
 | Force-Push: | `git push origin master --force |
 | Pull: | git pull |
 | Pull specific branch: | git pull origin branchname |
-| Fetch a pull request on GitHub by its ID and create a new branch: | git fetch upstream pull/ID/head: |new-pr-branch |
-| Clone to localhost: | git clone https: |//github.com/user/project.git or: | git clone ssh: |//user@domain.com/~/dir/.git |
-| Clone to localhost folder: | git clone https: |//github.com/user/project.git ~/dir/folder |
-| Clone specific branch to localhost: | git clone -b branchname https: |//github.com/user/project.git |
-| Clone with token authentication (in CI environment): | git clone https: |//oauth2: |<token>@gitlab.com/username/repo.git |
-| Delete remote branch (push nothing): | git push origin : |branchname or: | git push origin --delete branchname |
+| Fetch a pull request on GitHub by its ID and create a new branch: git fetch upstream pull/ID/head:new-pr-branch |
+| Clone to localhost: | git clone https://github.com/user/project.git or: git clone ssh://user@domain.com/~/dir/.git |
+| Clone to localhost folder: | git clone https://github.com/user/project.git ~/dir/folder |
+| Clone specific branch to localhost: | git clone -b branchname https://github.com/user/project.git |
+| Clone with token authentication (in CI environment): | git clone https://oauth2:<token>@gitlab.com/username/repo.git |
+| Delete remote branch (push nothing): git push origin :branchname or:git push origin --delete branchname |
 
 ## Archive
 
@@ -198,18 +198,18 @@ Help: git help
 
 | Description | Command |
 | ------- | -------- |
-| Ignore files that have already been committed to a Git repository: | http: |//stackoverflow.com/a/1139797/1815847 |
+| Ignore files that have already been committed to a Git repository: | http://stackoverflow.com/a/1139797/1815847 |
 
 ## Security
 
 | Description | Command |
 | ------- | -------- |
-| Hide Git on the web via .htaccess: | RedirectMatch 404 /\.git (more info here: | http: |//stackoverflow.com/a/17916515/1815847) |
+| Hide Git on the web via .htaccess: | RedirectMatch 404 /\.git (more info here: http://stackoverflow.com/a/17916515/1815847) |
 
 ## Large File Storage
 
 | Description | Command |
 | ------- | -------- |
-| Website: | https: |//git-lfs.github.com/ |
+| Website: | https://git-lfs.github.com/ |
 | Install: | brew install git-lfs |
 | Track *.psd files: | git lfs track "*.psd" (init, add, commit and push as written above) |
