@@ -1,5 +1,5 @@
 ---
-#title: "Home"
+title: "Home"
 keywords: HOMEPAGE
 summary: "This is a website to maintain and track my progress and have quick look back notes for the future. I use it this a referance to reuse the concepts in the future"
 sidebar: home_sidebar
