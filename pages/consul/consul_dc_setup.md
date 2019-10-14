@@ -18,8 +18,8 @@ sudo tee /etc/consul.d/consul-server.json <<EOF
 EOF
 ```
 {% include tip.html content="We highly discourage single-server production deployments." %}
-> Ideal setup whould be 5 server setup so it will be helpfull during failover
-> bootstrap_expect should be changed based on number of servers
+> Ideal setup whould be 5 server setup so it will be helpfull during failover.   
+> Bootstrap_expect should be changed based on number of servers.  
 
 ## Where to Next?
 
