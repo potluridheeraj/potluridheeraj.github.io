@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>Content types pages | dp</title>
+<meta name="description" content="Installing consul in your machine">
+<meta name="keywords" content=" consul,install, consul install">
+<title>Consul prerequisites | dp</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -165,7 +165,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Content types pages">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Consul prerequisites">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -191,27 +191,9 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">Learn </li>
+  <li class="sidebarTitle"> </li>
   
   
-  
-      
-  
-  <li>
-      <a title="Home" href="#">Home</a>
-      <ul>
-          
-          
-          
-          <li><a title="Home" href="index.html">Home</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
   
   <li>
       <a title="Consul" href="#">Consul</a>
@@ -219,7 +201,35 @@
           
           
           
-          <li><a title="About Consul" href="about_consul.html">About Consul</a></li>
+          <li><a title="Home" href="consul.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Vagrant setup for consul" href="vagrant_consul.html">Vagrant setup for consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a title="Consul pre-requisites" href="consul_prerequisites.html">Consul pre-requisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install and configure consul" href="consul_install_configure_consul.html">Install and configure consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul entire installation sctipt" href="consul_install.html">Consul entire installation sctipt</a></li>
           
           
           
@@ -230,12 +240,28 @@
       
   
   <li>
-      <a title="About" href="#">About</a>
+      <a title="Service Regestration" href="#">Service Regestration</a>
       <ul>
           
           
           
-          <li><a title="about" href="about.html">about</a></li>
+          <li><a title="Nginx" href="nginx.html">Nginx</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Cheat Sheet" href="#">Cheat Sheet</a>
+      <ul>
+          
+          
+          
+          <li><a title="Cheat sheet" href="consul_sheet.html">Cheat sheet</a></li>
           
           
           
@@ -262,13 +288,15 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Content types pages</h1>
+   <h1 class="post-title-main">Consul prerequisites</h1>
 </div>
 
 
 
 <div class="post-content">
 
+   
+    <div class="summary">Installing consul in your machine</div>
    
 
     
@@ -299,104 +327,82 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">content_types</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
+   <h2 id="decide-on-which-version-of-consul-need-to-be-installed">Decide on which version of consul need to be installed</h2>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> I am installing consul version 1.4.4 as stated below please install latest version if needed</div>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+<p>Below section will set local ip-address</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c"># Select required version</span>
+<span class="nv">consul_version</span><span class="o">=</span><span class="s1">'1.4.4'</span>
 
-   </tbody>
-</table>
+<span class="c"># Set local/private IP address</span>
+<span class="nv">local_ipv4</span><span class="o">=</span><span class="s2">"</span><span class="sb">`</span>ip addr | <span class="nb">grep</span> <span class="s1">'state UP'</span> <span class="nt">-A2</span> | <span class="nb">tail</span> <span class="nt">-n1</span> | <span class="nb">awk</span> <span class="s1">'{print $2}'</span> | <span class="nb">cut</span> <span class="nt">-f1</span>  <span class="nt">-d</span><span class="s1">'/'</span><span class="sb">`</span><span class="s2">"</span>
 
+<span class="c"># Detect package management system.</span>
+<span class="nv">YUM</span><span class="o">=</span><span class="si">$(</span>which yum 2&gt;/dev/null<span class="si">)</span>
+<span class="nv">APT_GET</span><span class="o">=</span><span class="si">$(</span>which apt-get 2&gt;/dev/null<span class="si">)</span>
+<span class="nv">ZYPPER</span><span class="o">=</span><span class="si">$(</span>which zypper 2&gt;/dev/null<span class="si">)</span>
+
+</code></pre></div></div>
+
+<h2 id="prerequisite-configuration-for-consul">prerequisite configuration for consul</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#######################</span>
+<span class="c"># Install Prerequisites</span>
+<span class="c">#######################</span>
+<span class="nb">echo</span> <span class="s2">"Installing jq"</span>
+<span class="nb">sudo </span>curl <span class="nt">--silent</span> <span class="nt">-Lo</span> /bin/jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
+<span class="nb">sudo chmod</span> +x /bin/jq
+
+<span class="nb">sudo </span>zypper <span class="nb">install</span> <span class="nt">-y</span> wget unzip bind-utils ntp
+
+<span class="nb">echo</span> <span class="s2">"Disable reverse dns lookup in SSH"</span>
+<span class="nb">sudo </span>sh <span class="nt">-c</span> <span class="s1">'echo "\nUseDNS no" &gt;&gt; /etc/ssh/sshd_config'</span>
+
+<span class="nb">echo</span> <span class="s2">"Completed Installing Prerequisites"</span>
+</code></pre></div></div>
+
+<h2 id="setting-up-a-user-in-shell">setting up a user in shell</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">####################</span>
+<span class="c"># Set up Consul User</span>
+<span class="c">####################</span>
+<span class="nv">USER</span><span class="o">=</span><span class="s2">"consul"</span>
+<span class="nv">COMMENT</span><span class="o">=</span><span class="s2">"Consul"</span>
+<span class="nv">GROUP</span><span class="o">=</span><span class="s2">"consul"</span>
+<span class="nv">HOME</span><span class="o">=</span><span class="s2">"/srv/consul"</span>
+
+<span class="nb">echo</span> <span class="s2">"Creating Consul user"</span>
+
+  <span class="c"># SUSE user setup</span>
+  <span class="nb">sudo</span> /usr/sbin/groupadd <span class="nt">--force</span> <span class="nt">--system</span> <span class="k">${</span><span class="nv">GROUP</span><span class="k">}</span>
+
+  <span class="k">if</span> <span class="o">!</span> getent passwd <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> <span class="o">&gt;</span>/dev/null <span class="p">;</span> <span class="k">then
+    </span><span class="nb">sudo</span> /usr/sbin/useradd <span class="se">\</span>
+      <span class="nt">--system</span> <span class="se">\</span>
+      <span class="nt">--gid</span> <span class="k">${</span><span class="nv">GROUP</span><span class="k">}</span> <span class="se">\</span>
+      <span class="nt">--home</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span> <span class="se">\</span>
+      <span class="nt">--no-create-home</span> <span class="se">\</span>
+      <span class="nt">--comment</span> <span class="s2">"</span><span class="k">${</span><span class="nv">COMMENT</span><span class="k">}</span><span class="s2">"</span> <span class="se">\</span>
+      <span class="nt">--shell</span> /bin/false <span class="se">\</span>
+      <span class="k">${</span><span class="nv">USER</span><span class="k">}</span>  <span class="o">&gt;</span>/dev/null
+  <span class="k">fi</span>
+
+</code></pre></div></div>
+<h2 id="installing-dnsmasq">installing Dnsmasq</h2>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">###############################</span>
+<span class="c"># Install and Configure Dnsmasq</span>
+<span class="c">###############################</span>
+  <span class="nb">echo</span> <span class="s2">"Installing dnsmasq"</span>
+  <span class="nb">sudo </span>zypper <span class="nb">install</span> <span class="nt">-y</span> dnsmasq
+
+<span class="nb">echo</span> <span class="s2">"Configuring dnsmasq to forward .consul requests to consul port 8600"</span>
+<span class="nb">sudo </span>sh <span class="nt">-c</span> <span class="s1">'echo "server=/consul/127.0.0.1#8600" &gt;&gt; /etc/dnsmasq.d/consul'</span>
+
+<span class="nb">sudo </span>systemctl <span class="nb">enable </span>dnsmasq
+<span class="nb">sudo </span>systemctl restart dnsmasq
+
+</code></pre></div></div>
 
 
     <div class="tags">

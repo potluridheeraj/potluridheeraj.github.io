@@ -15,17 +15,6 @@
 
 
 {
-"title": "About",
-"tags": "",
-"keywords": "about",
-"url": "landing_page.html",
-"summary": ""
-}
-,
-
-
-
-{
 "title": "Consul cheet sheet",
 "tags": "",
 "keywords": "consul cheet sheet",
@@ -59,11 +48,33 @@
 
 
 {
+"title": "install and setup consul",
+"tags": "",
+"keywords": "consul,install, consul install",
+"url": "consul_install_configure_consul.html",
+"summary": "Installing consul in your machine"
+}
+,
+
+
+
+{
 "title": "Consul",
 "tags": "",
 "keywords": "consul",
 "url": "consul_landing_page.html",
 "summary": ""
+}
+,
+
+
+
+{
+"title": "Consul prerequisites",
+"tags": "",
+"keywords": "consul,install, consul install",
+"url": "consul_prerequisites.html",
+"summary": "Installing consul in your machine"
 }
 ,
 
@@ -244,6 +255,17 @@
 
 
 
+
+
+
+{
+"title": "Setup vagrant for consul",
+"tags": "",
+"keywords": "consul,install, vagrant",
+"url": "vagrant_consul.html",
+"summary": "Installing consul in your machine"
+}
+,
 
 
 

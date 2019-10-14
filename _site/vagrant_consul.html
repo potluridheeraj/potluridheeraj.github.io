@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>Content types pages | dp</title>
+<meta name="description" content="Installing consul in your machine">
+<meta name="keywords" content=" consul,install, vagrant">
+<title>Setup vagrant for consul | dp</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -165,7 +165,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Content types pages">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Setup vagrant for consul">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -191,27 +191,9 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">Learn </li>
+  <li class="sidebarTitle"> </li>
   
   
-  
-      
-  
-  <li>
-      <a title="Home" href="#">Home</a>
-      <ul>
-          
-          
-          
-          <li><a title="Home" href="index.html">Home</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
   
   <li>
       <a title="Consul" href="#">Consul</a>
@@ -219,7 +201,35 @@
           
           
           
-          <li><a title="About Consul" href="about_consul.html">About Consul</a></li>
+          <li><a title="Home" href="consul.html">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Vagrant setup for consul" href="vagrant_consul.html">Vagrant setup for consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul pre-requisites" href="consul_prerequisites.html">Consul pre-requisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install and configure consul" href="consul_install_configure_consul.html">Install and configure consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul entire installation sctipt" href="consul_install.html">Consul entire installation sctipt</a></li>
           
           
           
@@ -230,12 +240,28 @@
       
   
   <li>
-      <a title="About" href="#">About</a>
+      <a title="Service Regestration" href="#">Service Regestration</a>
       <ul>
           
           
           
-          <li><a title="about" href="about.html">about</a></li>
+          <li><a title="Nginx" href="nginx.html">Nginx</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Cheat Sheet" href="#">Cheat Sheet</a>
+      <ul>
+          
+          
+          
+          <li><a title="Cheat sheet" href="consul_sheet.html">Cheat sheet</a></li>
           
           
           
@@ -262,13 +288,15 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Content types pages</h1>
+   <h1 class="post-title-main">Setup vagrant for consul</h1>
 </div>
 
 
 
 <div class="post-content">
 
+   
+    <div class="summary">Installing consul in your machine</div>
    
 
     
@@ -299,104 +327,91 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">content_types</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
+   <h2 id="setting-up-vagrant">Setting up vagrant</h2>
+<p>This demo provides a very simple <code class="highlighter-rouge">Vagrantfile</code> that creates Consul server nodes</p>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+<p>To install vagrant please go to <a href="https://www.vagrantup.com/downloads.html">Vagrant</a></p>
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> To follow through the whole demo you can you use below vagrant file</div>
 
-   </tbody>
-</table>
+<p>Below <code class="highlighter-rouge">Vagrantfile</code> creates:</p>
+<ul>
+  <li>1 consul server</li>
+  <li>1 lb server</li>
+  <li>4 web servers</li>
+</ul>
 
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> We highly discourage single-server production deployments.  </div>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Vagrant.configure<span class="o">(</span><span class="s2">"2"</span><span class="o">)</span> <span class="k">do</span> |config|
+  config.vm.box <span class="o">=</span> <span class="s2">"suse/sles12sp2"</span>
+  config.vm.box_version <span class="o">=</span> <span class="s2">"0.0.1"</span>
+
+  config.vm.define <span class="s2">"consul-server"</span> <span class="k">do</span> |cs|
+    cs.vm.hostname <span class="o">=</span> <span class="s2">"consul_server"</span>
+    cs.vm.network <span class="s2">"private_network"</span>, ip: <span class="s2">"172.60.60.6"</span>
+  end
+
+  config.vm.define <span class="s2">"lb"</span> <span class="k">do</span> |lb|
+    lb.vm.hostname <span class="o">=</span> <span class="s2">"lb"</span>
+    lb.vm.network <span class="s2">"private_network"</span>, ip: <span class="s2">"172.60.60.11"</span>
+  end
+
+  <span class="o">(</span>1..4<span class="o">)</span>.each <span class="k">do</span> |i|
+    config.vm.define <span class="s2">"web#{i}"</span> <span class="k">do</span> |web|
+      web.vm.hostname <span class="o">=</span> <span class="s2">"web#{i}"</span>
+      web.vm.network <span class="s2">"private_network"</span>, ip: <span class="s2">"172.60.60.2#{i}"</span>
+    end
+  end
+
+end
+
+</code></pre></div></div>
+
+<h2 id="vagrant-consul-demo">Vagrant Consul Demo</h2>
+<p>To get started, you can start the nodes by just doing:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant up
+</code></pre></div></div>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> If you prefer a different Vagrant box, you can set the <code class="highlighter-rouge">config.vm.box</code> </div>
+
+<p>Once it is finished, you should be able to see the following:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant status
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Current machine states:
+consul-server                         running (virtualbox)
+lb                                    running (virtualbox)
+web 1 through 4                       running (virtualbox)     
+</code></pre></div></div>
+
+<p>At this point the 6 nodes are running and you can SSH in to play with them:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant ssh consul-server
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OUTPUT:
+consul version
+Consul v0.7.5
+Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol &gt;2 when speaking to compatible agents)
+exit
+</code></pre></div></div>
+
+<p>and</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant ssh lb
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>consul version
+Consul v0.7.5
+Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol &gt;2 when speaking to compatible agents)
+exit
+</code></pre></div></div>
+
+<h2 id="where-to-next">Where to Next?</h2>
+
+<p>To learn more about starting Consul, joining nodes into a cluster, and
+interacting with the agent, check out the <a href="consul_prerequisites.html">Getting Started guide</a>.</p>
 
 
     <div class="tags">
