@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Installing consul in your machine">
 <meta name="keywords" content=" consul,install, consul install">
-<title>install and setup consul | dp</title>
+<title>Install and setup consul | dp</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -165,7 +165,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="install and setup consul">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Install and setup consul">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -234,6 +234,13 @@
           
           
           
+          
+          
+          <li><a title="Consul DC setup for server" href="consul_dc_setup.html">Consul DC setup for server</a></li>
+          
+          
+          
+          
       </ul>
    </li>
      
@@ -288,7 +295,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">install and setup consul</h1>
+   <h1 class="post-title-main">Install and setup consul</h1>
 </div>
 
 
@@ -398,6 +405,16 @@ service consul status
 <span class="nb">echo</span> <span class="s2">"################ Consul installation complete #################"</span>
 
 </code></pre></div></div>
+
+<h2 id="where-to-next">Where to Next?</h2>
+<p>Now you should have consul installed in this machine.</p>
+
+<blockquote>
+  <p>In order to install I created single script which can be used to install in rest of the 5 servers</p>
+</blockquote>
+
+<p>To setup vagrant for Consul, joining nodes into a cluster, and
+interacting with the agent, check out: <a href="consul_install.html">Single Script</a>.</p>
 
 
     <div class="tags">

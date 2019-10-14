@@ -234,6 +234,13 @@
           
           
           
+          
+          
+          <li><a title="Consul DC setup for server" href="consul_dc_setup.html">Consul DC setup for server</a></li>
+          
+          
+          
+          
       </ul>
    </li>
      
@@ -345,7 +352,7 @@ $('#toc').on('click', 'a', function() {
 
 </code></pre></div></div>
 
-<h2 id="prerequisite-configuration-for-consul">prerequisite configuration for consul</h2>
+<h2 id="prerequisite-configuration-for-consul">Prerequisite configuration for consul</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#######################</span>
 <span class="c"># Install Prerequisites</span>
@@ -362,7 +369,7 @@ $('#toc').on('click', 'a', function() {
 <span class="nb">echo</span> <span class="s2">"Completed Installing Prerequisites"</span>
 </code></pre></div></div>
 
-<h2 id="setting-up-a-user-in-shell">setting up a user in shell</h2>
+<h2 id="setting-up-a-user-in-shell">Setting up a user in shell</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">####################</span>
 <span class="c"># Set up Consul User</span>
@@ -389,7 +396,7 @@ $('#toc').on('click', 'a', function() {
   <span class="k">fi</span>
 
 </code></pre></div></div>
-<h2 id="installing-dnsmasq">installing Dnsmasq</h2>
+<h2 id="installing-dnsmasq">Installing Dnsmasq</h2>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">###############################</span>
 <span class="c"># Install and Configure Dnsmasq</span>
 <span class="c">###############################</span>
@@ -403,6 +410,11 @@ $('#toc').on('click', 'a', function() {
 <span class="nb">sudo </span>systemctl restart dnsmasq
 
 </code></pre></div></div>
+
+<h2 id="where-to-next">Where to Next?</h2>
+
+<p>To setup vagrant for Consul, joining nodes into a cluster, and
+interacting with the agent, check out: <a href="consul_install_configure_consul.html">install and setup consul</a>.</p>
 
 
     <div class="tags">

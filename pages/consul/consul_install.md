@@ -7,7 +7,11 @@ permalink: consul_install.html
 folder: consul
 ---
 
-Single shell script to install consul
+# Single shell script to install consul
+
+> copy entire bellow scrip to `consul.sh` and run it in each and every vm and run it in all the 6 Vagant vm's
+
+{% include tip.html content="Run '$service consul restart' after installing consul in every machine and check for status" %}
     
 ```shell
 
@@ -159,3 +163,10 @@ sleep 15
 cat /etc/consul.d/consul-acl.json
 
 ````
+
+
+## Where to Next?
+By this time you will have consul available in all servers.    
+ 
+Joining nodes into a cluster, and
+interacting with the agent, check out [Setting up Dc for consul](consul_dc_setup.html).

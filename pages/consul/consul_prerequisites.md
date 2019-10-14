@@ -26,7 +26,7 @@ ZYPPER=$(which zypper 2>/dev/null)
 ```
 
 
-## prerequisite configuration for consul
+## Prerequisite configuration for consul
 
 ```shell
 #######################
@@ -44,7 +44,7 @@ sudo sh -c 'echo "\nUseDNS no" >> /etc/ssh/sshd_config'
 echo "Completed Installing Prerequisites"
 ```
 
-## setting up a user in shell 
+## Setting up a user in shell 
 
 ```shell
 ####################
@@ -72,7 +72,7 @@ echo "Creating Consul user"
   fi
 
 ```
-## installing Dnsmasq 
+## Installing Dnsmasq 
 ```shell
 ###############################
 # Install and Configure Dnsmasq
@@ -86,4 +86,10 @@ sudo sh -c 'echo "server=/consul/127.0.0.1#8600" >> /etc/dnsmasq.d/consul'
 sudo systemctl enable dnsmasq
 sudo systemctl restart dnsmasq
 
-````
+```
+
+
+## Where to Next?
+
+To setup vagrant for Consul, joining nodes into a cluster, and
+interacting with the agent, check out: [install and setup consul](consul_install_configure_consul.html).

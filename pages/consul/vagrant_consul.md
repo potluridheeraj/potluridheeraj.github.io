@@ -1,7 +1,7 @@
 ---
 title: Setup vagrant for consul
 keywords: consul,install, vagrant
-summary: "Installing consul in your machine"
+summary: "Installing vagrant"
 sidebar: consul_sidebar
 permalink: vagrant_consul.html
 folder: consul
@@ -10,13 +10,14 @@ folder: consul
 ## Setting up vagrant
 This demo provides a very simple `Vagrantfile` that creates Consul server nodes
 
-To install vagrant please go to [Vagrant](https://www.vagrantup.com/downloads.html)
+> To install vagrant please go to [Vagrant](https://www.vagrantup.com/downloads.html)
 {% include tip.html content="To follow through the whole demo you can you use below vagrant file" %}
 
-Below `Vagrantfile` creates:
-- 1 consul server 
-- 1 lb server
-- 4 web servers
+Below `Vagrantfile` creates:  
+   
+1 consul server  
+1 lb server  
+4 web servers  
 
 {% include warning.html content="We highly discourage single-server production deployments.  " %}
 
@@ -59,7 +60,7 @@ vagrant up
 Once it is finished, you should be able to see the following:
 
 ```shell
-vagrant status
+vagrant status # will show status of each server 
 ```
 ```
 Current machine states:
@@ -71,30 +72,31 @@ web 1 through 4                       running (virtualbox)
 At this point the 6 nodes are running and you can SSH in to play with them:
 
 ```shell
-vagrant ssh consul-server
+vagrant ssh consul-server  #will let you login to vagrant machine
 ```
 
-```
-OUTPUT:
-consul version
-Consul v0.7.5
-Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol >2 when speaking to compatible agents)
-exit
-```
+
+>consul version   
+>Consul v0.7.5   
+>Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol >2 when speaking to compatible agents)   
+>exit   
 
 and
 
 ```shell
 vagrant ssh lb
 ```
-```
-consul version
-Consul v0.7.5
-Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol >2 when speaking to compatible agents)
-exit
-```
+
+>consul version  
+>Consul v0.7.5  
+>Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol >2 when speaking to compatible agents)  
+>exit  
+
 
 ## Where to Next?
 
 To learn more about starting Consul, joining nodes into a cluster, and
-interacting with the agent, check out the [Getting Started guide](consul_prerequisites.html).
+interacting with the agent, check out: [Consul Pre-requisites](consul_prerequisites.html).
+
+If want to skip understanding what script does, you can jump directly to install consul with a script
+{% include note.html content="Single file scrip can be found [here](consul_install.html) " %}

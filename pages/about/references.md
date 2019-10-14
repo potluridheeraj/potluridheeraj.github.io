@@ -7,14 +7,14 @@ permalink: reference.html
 folder: about
 ---
 
-Theam :
-- https://idratherbewriting.com/documentation-theme-jekyll/index.html
+Theam :  
+<https://idratherbewriting.com/documentation-theme-jekyll/index.html>
 
-Consul :
-- https://www.consul.io/
+Consul :  
+<https://www.consul.io/>
 
-Cheet Sheets :
-- https://github.com/lwindolf/lzone-cheat-sheets
+Cheet Sheets :  
+<https://github.com/lwindolf/lzone-cheat-sheets>
 
-Learning sights:
-- https://www.pluralsight.io/
+Learning sights:  
+<https://www.pluralsight.io/>

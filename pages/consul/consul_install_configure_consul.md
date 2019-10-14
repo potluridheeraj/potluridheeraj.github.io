@@ -1,5 +1,5 @@
 ---
-title: install and setup consul
+title: Install and setup consul
 keywords: consul,install, consul install
 summary: "Installing consul in your machine"
 sidebar: consul_sidebar
@@ -79,3 +79,12 @@ service consul status
 echo "################ Consul installation complete #################"
 
 ````
+
+
+## Where to Next?
+Now you should have consul installed in this machine.   
+ 
+>In order to install I created single script which can be used to install in rest of the 5 servers
+
+To setup vagrant for Consul, joining nodes into a cluster, and
+interacting with the agent, check out: [Single Script](consul_install.html).

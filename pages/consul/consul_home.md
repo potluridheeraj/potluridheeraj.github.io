@@ -31,4 +31,7 @@ Service registry, integrated health checks, and DNS and HTTP interfaces enable a
  - [Vm ware](https://www.vmware.com/) or [Virtualbox](https://www.virtualbox.org/) 
  - [Vagrant](https://www.vagrantup.com/docs/installation/) 
  
-# [Next: To install consul](consul_install.html)
+## Where to Next?
+
+To setup vagrant for Consul, joining nodes into a cluster, and
+interacting with the agent, check out: [Setting up Dc for consul](vagrant_consul.html).

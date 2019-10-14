@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Installing consul in your machine">
+<meta name="description" content="Installing vagrant">
 <meta name="keywords" content=" consul,install, vagrant">
 <title>Setup vagrant for consul | dp</title>
 <link rel="stylesheet" href="css/syntax.css">
@@ -234,6 +234,13 @@
           
           
           
+          
+          
+          <li><a title="Consul DC setup for server" href="consul_dc_setup.html">Consul DC setup for server</a></li>
+          
+          
+          
+          
       </ul>
    </li>
      
@@ -296,7 +303,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Installing consul in your machine</div>
+    <div class="summary">Installing vagrant</div>
    
 
     
@@ -330,15 +337,16 @@ $('#toc').on('click', 'a', function() {
    <h2 id="setting-up-vagrant">Setting up vagrant</h2>
 <p>This demo provides a very simple <code class="highlighter-rouge">Vagrantfile</code> that creates Consul server nodes</p>
 
-<p>To install vagrant please go to <a href="https://www.vagrantup.com/downloads.html">Vagrant</a></p>
+<blockquote>
+  <p>To install vagrant please go to <a href="https://www.vagrantup.com/downloads.html">Vagrant</a></p>
+</blockquote>
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> To follow through the whole demo you can you use below vagrant file</div>
 
 <p>Below <code class="highlighter-rouge">Vagrantfile</code> creates:</p>
-<ul>
-  <li>1 consul server</li>
-  <li>1 lb server</li>
-  <li>4 web servers</li>
-</ul>
+
+<p>1 consul server<br />
+1 lb server<br />
+4 web servers</p>
 
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> We highly discourage single-server production deployments.  </div>
 
@@ -378,7 +386,7 @@ end
 
 <p>Once it is finished, you should be able to see the following:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant status
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant status <span class="c"># will show status of each server </span>
 </code></pre></div></div>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Current machine states:
 consul-server                         running (virtualbox)
@@ -388,30 +396,35 @@ web 1 through 4                       running (virtualbox)
 
 <p>At this point the 6 nodes are running and you can SSH in to play with them:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant ssh consul-server
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant ssh consul-server  <span class="c">#will let you login to vagrant machine</span>
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OUTPUT:
-consul version
-Consul v0.7.5
-Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol &gt;2 when speaking to compatible agents)
-exit
-</code></pre></div></div>
+<blockquote>
+  <p>consul version <br />
+Consul v0.7.5 <br />
+Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol &gt;2 when speaking to compatible agents) <br />
+exit</p>
+</blockquote>
 
 <p>and</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant ssh lb
 </code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>consul version
-Consul v0.7.5
-Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol &gt;2 when speaking to compatible agents)
-exit
-</code></pre></div></div>
+
+<blockquote>
+  <p>consul version<br />
+Consul v0.7.5<br />
+Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol &gt;2 when speaking to compatible agents)<br />
+exit</p>
+</blockquote>
 
 <h2 id="where-to-next">Where to Next?</h2>
 
 <p>To learn more about starting Consul, joining nodes into a cluster, and
-interacting with the agent, check out the <a href="consul_prerequisites.html">Getting Started guide</a>.</p>
+interacting with the agent, check out: <a href="consul_prerequisites.html">Consul Pre-requisites</a>.</p>
+
+<p>If want to skip understanding what script does, you can jump directly to install consul with a script</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Single file scrip can be found <a href="consul_install.html">here</a> </div>
 
 
     <div class="tags">

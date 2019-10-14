@@ -26,6 +26,17 @@
 
 
 {
+"title": "Consul Dc setup for server",
+"tags": "",
+"keywords": "consul",
+"url": "consul_dc_setup.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Consul",
 "tags": "",
 "keywords": "consul",
@@ -48,22 +59,11 @@
 
 
 {
-"title": "install and setup consul",
+"title": "Install and setup consul",
 "tags": "",
 "keywords": "consul,install, consul install",
 "url": "consul_install_configure_consul.html",
 "summary": "Installing consul in your machine"
-}
-,
-
-
-
-{
-"title": "Consul",
-"tags": "",
-"keywords": "consul",
-"url": "consul_landing_page.html",
-"summary": ""
 }
 ,
 
@@ -263,7 +263,7 @@
 "tags": "",
 "keywords": "consul,install, vagrant",
 "url": "vagrant_consul.html",
-"summary": "Installing consul in your machine"
+"summary": "Installing vagrant"
 }
 ,
 

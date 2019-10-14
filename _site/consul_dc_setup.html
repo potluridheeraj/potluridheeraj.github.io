@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" consul cheet sheet">
-<title>Consul cheet sheet | dp</title>
+<meta name="keywords" content=" consul">
+<title>Consul Dc setup for server | dp</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -165,7 +165,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Consul cheet sheet">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Consul Dc setup for server">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -236,7 +236,7 @@
           
           
           
-          <li><a title="Consul DC setup for server" href="consul_dc_setup.html">Consul DC setup for server</a></li>
+          <li class="active"><a title="Consul DC setup for server" href="consul_dc_setup.html">Consul DC setup for server</a></li>
           
           
           
@@ -268,7 +268,7 @@
           
           
           
-          <li class="active"><a title="Cheat sheet" href="consul_sheet.html">Cheat sheet</a></li>
+          <li><a title="Cheat sheet" href="consul_sheet.html">Cheat sheet</a></li>
           
           
           
@@ -295,7 +295,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Consul cheet sheet</h1>
+   <h1 class="post-title-main">Consul Dc setup for server</h1>
 </div>
 
 
@@ -332,64 +332,26 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <h2 id="start-stop-consul-service">Start-stop consul service</h2>
+   <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Run this to setup DC1 in consul-server</div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service consul start
-service consul restart
-service conusl stop
-</code></pre></div></div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo tee</span> /etc/consul.d/consul-server.json <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+{
+  "datacenter": "dc4",
+  "server": true,
+  "bootstrap_expect": 1
+}
+</span><span class="no">EOF
+</span></code></pre></div></div>
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> We highly discourage single-server production deployments.</div>
+<blockquote>
+  <p>Ideal setup whould be 5 server setup so it will be helpfull during failover
+bootstrap_expect should be changed based on number of servers</p>
+</blockquote>
 
-<h2 id="start-an-agent">Start an agent</h2>
+<h2 id="where-to-next">Where to Next?</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>consul agent -server -bind=&lt;ip&gt; -client=&lt;ip&gt; -ui -data-dir=/data/consul -config-dir=/etc/consul -node=$(hostname) -datacenter=$datacenter &amp;
-</code></pre></div></div>
-
-<h2 id="join-a-cluster">Join a cluster</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>consul join &lt;ip&gt; &lt;ip&gt; [&lt;ip&gt; [...]]
-</code></pre></div></div>
-
-<h2 id="show-cluster-info">Show cluster info</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>consul info        # show active config summary
-consul members     # show cluster members
-consul monitor     # tail activity log
-consul reload      # reload config
-
-consul keyring -list
-consul keyring -install
-consul keyring -use         # Use a key which was previously installed
-consul keyring -remove 
-</code></pre></div></div>
-
-<h2 id="accessing-the-key-value-store">Accessing the key-value store</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>consul kv get &lt;path&gt;
-consul kv get --detailed &lt;path&gt;    # include metadata
-consul kv put &lt;path&gt; &lt;value&gt;
-consul kv delete &lt;path&gt;
-</code></pre></div></div>
-
-<h2 id="dumping-and-importing-values-fromto-json">Dumping and importing values from/to JSON</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>consul kv export [&lt;prefix&gt;] &gt;values.json
-consul kv import &lt;values.json
-</code></pre></div></div>
-
-<h2 id="rest-api">REST API</h2>
-
-<p>Default Port is  http :8500
-                 https:8501</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/v1/catalog/nodes
-/v1/catalog/services
- 
-/v1/agent/checks
-/v1/agent/services
-/v1/agent/service/register
- 
-/v1/health/checks/&lt;service&gt;
-</code></pre></div></div>
+<p>To setup vagrant for Consul, joining nodes into a cluster, and
+interacting with the agent, check out: <a href="consul_dc_setup.html">Setting up Dc for consul</a>.</p>
 
 
     <div class="tags">
