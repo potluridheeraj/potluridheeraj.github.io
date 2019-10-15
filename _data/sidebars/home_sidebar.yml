@@ -10,11 +10,11 @@ entries:
     type: frontmatter
     folderitems:
     - title:
-      url: /titlepage.html
+      url: /titlepage
       output: pdf
       type: frontmatter
     - title:
-      url: /tocpage.html
+      url: /tocpage
       output: pdf
       type: frontmatter
     
@@ -23,7 +23,7 @@ entries:
     folderitems:
     
     - title: Home
-      url: /index.html
+      url: /index
       output: web, pdf
       type: homepage
   
@@ -32,11 +32,11 @@ entries:
     folderitems:
 
     - title: About consul
-      url: /consul.html
+      url: /consul
       output: web, pdf
     
     - title: Cheat sheet
-      url: /consul_sheet.html
+      url: /consul_sheet
       output: web, pdf
   
   - title: Docker
@@ -44,7 +44,7 @@ entries:
     folderitems:
 
     - title: About Docker
-      url: /docker.html
+      url: /docker
       output: web, pdf
   
   - title: Github
@@ -52,7 +52,7 @@ entries:
     folderitems:
 
     - title: Cheat sheet
-      url: /github_sheet.html
+      url: /github_sheet
       output: web, pdf
   
   - title: About
@@ -60,5 +60,5 @@ entries:
     folderitems:
 
     - title: About
-      url: /about.html
+      url: /about
       output: web, pdf

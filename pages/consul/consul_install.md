@@ -3,7 +3,7 @@ title: Consul Installation script
 keywords: consul,install, consul install
 summary: "Installing consul in your machine"
 sidebar: consul_sidebar
-permalink: consul_install.html
+permalink: consul_install
 folder: consul
 ---
 
@@ -169,4 +169,4 @@ cat /etc/consul.d/consul-acl.json
 By this time you will have consul available in all servers.    
  
 Joining nodes into a cluster, and
-interacting with the agent, check out [Setting up Dc for consul](consul_dc_setup.html).
+interacting with the agent, check out: [Setting up Dc for consul](consul_dc_setup).

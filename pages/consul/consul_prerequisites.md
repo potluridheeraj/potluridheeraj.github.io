@@ -3,7 +3,7 @@ title: Consul prerequisites
 keywords: consul,install, consul install
 summary: "Installing consul in your machine"
 sidebar: consul_sidebar
-permalink: consul_prerequisites.html
+permalink: consul_prerequisites
 folder: consul
 ---
 ## Decide on which version of consul need to be installed 
@@ -92,4 +92,4 @@ sudo systemctl restart dnsmasq
 ## Where to Next?
 
 To setup vagrant for Consul, joining nodes into a cluster, and
-interacting with the agent, check out: [install and setup consul](consul_install_configure_consul.html).
+interacting with the agent, check out: [install and setup consul](consul_install_configure_consul).

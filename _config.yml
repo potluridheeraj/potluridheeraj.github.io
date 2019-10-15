@@ -11,7 +11,7 @@ site_title: dp
 
 company_name: Dheeraj Potluri
 # this appears in the footer
-
+# permalink: /:title/
 #github_editme_path: potluridheeraj/Documentation
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 

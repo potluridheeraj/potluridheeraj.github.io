@@ -3,7 +3,7 @@ title: Consul Dc setup for server
 keywords: consul
 #summary: "DHEERAJ POTLURI"
 sidebar: consul_sidebar
-permalink: consul_dc_setup.html
+permalink: consul_dc_setup
 folder: consul
 ---
 {% include note.html content="Run this to setup DC1 in consul-server" %}
@@ -24,4 +24,4 @@ EOF
 ## Where to Next?
 
 To setup vagrant for Consul, joining nodes into a cluster, and
-interacting with the agent, check out: [Setting up Dc for consul](consul_dc_setup.html).
+interacting with the agent, check out: [Setting up Dc for consul](consul_dc_setup).

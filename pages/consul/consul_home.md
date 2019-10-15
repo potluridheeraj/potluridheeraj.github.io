@@ -3,7 +3,7 @@ title: Consul
 keywords: consul
 #summary: "DHEERAJ POTLURI"
 sidebar: consul_sidebar
-permalink: consul.html
+permalink: consul
 folder: consul
 ---
 
@@ -34,4 +34,4 @@ Service registry, integrated health checks, and DNS and HTTP interfaces enable a
 ## Where to Next?
 
 To setup vagrant for Consul, joining nodes into a cluster, and
-interacting with the agent, check out: [Setting up Dc for consul](vagrant_consul.html).
+interacting with the agent, check out: [Setting up Dc for consul](vagrant_consul).

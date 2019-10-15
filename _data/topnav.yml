@@ -13,11 +13,11 @@ topnav_dropdowns:
     - title: Products
       folderitems:
         - title: Consul
-          url: /consul.html
+          url: /consul
         - title: Docker
-          url: /docker.html
+          url: /docker
         - title: References
           url: /reference.html
         - title: About
-          url: /about.html
+          url: /about
 

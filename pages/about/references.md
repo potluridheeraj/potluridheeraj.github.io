@@ -3,7 +3,7 @@ title: Reference
 keywords: reference
 summary: "These are the most of my reference from where i got most of my information while i am learning new things"
 sidebar: 
-permalink: reference.html
+permalink: reference
 folder: about
 ---
 

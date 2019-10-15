@@ -3,7 +3,7 @@ title: About
 keywords: about
 #summary: "DHEERAJ POTLURI"
 sidebar: 
-permalink: about.html
+permalink: about
 folder: about
 ---
 # DHEERAJ POTLURI

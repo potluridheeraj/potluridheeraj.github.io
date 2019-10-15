@@ -3,7 +3,7 @@ title: Github Cheetsheet
 keywords: Cheetsheet 
 #summary: "DHEERAJ POTLURI"
 sidebar: 
-permalink: github_sheet.html
+permalink: github_sheet
 folder: github
 ---
 

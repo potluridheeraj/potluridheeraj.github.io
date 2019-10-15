@@ -3,7 +3,7 @@ title: Install and setup consul
 keywords: consul,install, consul install
 summary: "Installing consul in your machine"
 sidebar: consul_sidebar
-permalink: consul_install_configure_consul.html
+permalink: consul_install_configure_consul
 folder: consul
 ---
 ## Install Consul
@@ -87,4 +87,4 @@ Now you should have consul installed in this machine.
 >In order to install I created single script which can be used to install in rest of the 5 servers
 
 To setup vagrant for Consul, joining nodes into a cluster, and
-interacting with the agent, check out: [Single Script](consul_install.html).
+interacting with the agent, check out: [Single Script](consul_install).

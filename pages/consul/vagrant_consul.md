@@ -3,7 +3,7 @@ title: Setup vagrant for consul
 keywords: consul,install, vagrant
 summary: "Installing vagrant"
 sidebar: consul_sidebar
-permalink: vagrant_consul.html
+permalink: vagrant_consul
 folder: consul
 ---
 
@@ -96,7 +96,7 @@ vagrant ssh lb
 ## Where to Next?
 
 To learn more about starting Consul, joining nodes into a cluster, and
-interacting with the agent, check out: [Consul Pre-requisites](consul_prerequisites.html).
+interacting with the agent, check out: [Consul Pre-requisites](consul_prerequisites).
 
 If want to skip understanding what script does, you can jump directly to install consul with a script
-{% include note.html content="Single file scrip can be found [here](consul_install.html) " %}
+{% include note.html content="Single file scrip can be found [here](consul_install) " %}

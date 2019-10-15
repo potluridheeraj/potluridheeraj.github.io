@@ -7,7 +7,7 @@
 "title": "About",
 "tags": "",
 "keywords": "about",
-"url": "about.html",
+"url": "about",
 "summary": ""
 }
 ,
@@ -18,7 +18,7 @@
 "title": "Consul cheet sheet",
 "tags": "",
 "keywords": "consul cheet sheet",
-"url": "consul_sheet.html",
+"url": "consul_sheet",
 "summary": ""
 }
 ,
@@ -29,7 +29,7 @@
 "title": "Consul Dc setup for server",
 "tags": "",
 "keywords": "consul",
-"url": "consul_dc_setup.html",
+"url": "consul_dc_setup",
 "summary": ""
 }
 ,
@@ -40,7 +40,7 @@
 "title": "Consul",
 "tags": "",
 "keywords": "consul",
-"url": "consul.html",
+"url": "consul",
 "summary": ""
 }
 ,
@@ -51,7 +51,7 @@
 "title": "Consul Installation script",
 "tags": "",
 "keywords": "consul,install, consul install",
-"url": "consul_install.html",
+"url": "consul_install",
 "summary": "Installing consul in your machine"
 }
 ,
@@ -62,7 +62,7 @@
 "title": "Install and setup consul",
 "tags": "",
 "keywords": "consul,install, consul install",
-"url": "consul_install_configure_consul.html",
+"url": "consul_install_configure_consul",
 "summary": "Installing consul in your machine"
 }
 ,
@@ -73,7 +73,7 @@
 "title": "Consul prerequisites",
 "tags": "",
 "keywords": "consul,install, consul install",
-"url": "consul_prerequisites.html",
+"url": "consul_prerequisites",
 "summary": "Installing consul in your machine"
 }
 ,
@@ -84,7 +84,7 @@
 "title": "Github Cheetsheet",
 "tags": "",
 "keywords": "Cheetsheet",
-"url": "github_sheet.html",
+"url": "github_sheet",
 "summary": ""
 }
 ,
@@ -150,7 +150,7 @@
 "title": "Sample 1 Topic (Product 1)",
 "tags": "",
 "keywords": "sample",
-"url": "p1_sample1.html",
+"url": "p1_sample1",
 "summary": "This is just a sample topic..."
 }
 ,
@@ -227,7 +227,7 @@
 "title": "Reference",
 "tags": "",
 "keywords": "reference",
-"url": "reference.html",
+"url": "reference",
 "summary": "These are the most of my reference from where i got most of my information while i am learning new things"
 }
 ,
@@ -262,7 +262,7 @@
 "title": "Setup vagrant for consul",
 "tags": "",
 "keywords": "consul,install, vagrant",
-"url": "vagrant_consul.html",
+"url": "vagrant_consul",
 "summary": "Installing vagrant"
 }
 ,

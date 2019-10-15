@@ -3,7 +3,7 @@ title: Consul cheet sheet
 keywords: consul cheet sheet
 #summary: "DHEERAJ POTLURI"
 sidebar: consul_sidebar
-permalink: consul_sheet.html
+permalink: consul_sheet
 folder: consul
 ---
 

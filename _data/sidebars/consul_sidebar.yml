@@ -12,19 +12,19 @@ entries:
     folderitems:
     
     - title: Home
-      url: /consul.html
+      url: /consul
       output: web
     
     - title: Vagrant setup for consul
-      url: vagrant_consul.html
+      url: vagrant_consul
       output: web, pdf
       
     - title: Consul pre-requisites
-      url: /consul_prerequisites.html
+      url: /consul_prerequisites
       output: web, pdf
     
     - title: Install and configure consul
-      url: /consul_install_configure_consul.html
+      url: /consul_install_configure_consul
       output: web, pdf
 
     - title: Consul entire installation sctipt
@@ -32,7 +32,7 @@ entries:
       output: web, pdf
     
     - title: Consul DC setup for server
-      url: /consul_dc_setup.html
+      url: /consul_dc_setup
       output: web, pdf
 
   - title: Service Regestration
@@ -40,7 +40,7 @@ entries:
 
     folderitems:
     - title: Nginx
-      url: /nginx.html
+      url: /nginx
       output: web, pdf
   
   - title: Cheat Sheet
@@ -48,6 +48,6 @@ entries:
 
     folderitems:
     - title: Cheat sheet 
-      url: /consul_sheet.html
+      url: /consul_sheet
       output: web, pdf
 
