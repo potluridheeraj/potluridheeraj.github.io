@@ -46,6 +46,14 @@ entries:
     - title: About Docker
       url: /docker
       output: web, pdf
+
+  - title: Chef
+    output: web, pdf
+    folderitems:
+
+    - title: Cheat sheet
+      url: /chef_sheet
+      output: web, pdf
   
   - title: Github
     output: web, pdf

@@ -15,6 +15,17 @@
 
 
 {
+"title": "ChefConsul cheet sheet",
+"tags": "",
+"keywords": "chef cheet sheet",
+"url": "chef_sheet",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Consul cheet sheet",
 "tags": "",
 "keywords": "consul cheet sheet",
@@ -103,17 +114,6 @@
 
 
 {
-"title": "Sample 1 Topic (Product 1)",
-"tags": "",
-"keywords": "sample",
-"url": "p1_sample20.html",
-"summary": "This is just a sample topic..."
-}
-,
-
-
-
-{
 "title": "News",
 "tags": "",
 "keywords": "news, blog, updates, release notes, announcements",
@@ -130,94 +130,6 @@
 "keywords": "news, blog, updates, release notes, announcements",
 "url": "news_archive.html",
 "summary": ""
-}
-,
-
-
-
-{
-"title": "Product 1",
-"tags": "",
-"keywords": "mydoc",
-"url": "p1_landing_page.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Sample 1 Topic (Product 1)",
-"tags": "",
-"keywords": "sample",
-"url": "p1_sample1",
-"summary": "This is just a sample topic..."
-}
-,
-
-
-
-{
-"title": "Sample 2 Topic (Product 1)",
-"tags": "",
-"keywords": "sample",
-"url": "p1_sample2.html",
-"summary": "This is just a sample topic..."
-}
-,
-
-
-
-{
-"title": "Sample 3 Topic (Product 1)",
-"tags": "",
-"keywords": "sample",
-"url": "p1_sample3.html",
-"summary": "This is just a sample topic..."
-}
-,
-
-
-
-{
-"title": "Sample 4 Topic (Product 1)",
-"tags": "",
-"keywords": "sample",
-"url": "p1_sample4.html",
-"summary": "This is just a sample topic..."
-}
-,
-
-
-
-{
-"title": "Sample 5 Topic (Product 1)",
-"tags": "",
-"keywords": "sample",
-"url": "p1_sample5.html",
-"summary": "This is just a sample topic..."
-}
-,
-
-
-
-{
-"title": "Sample 6 Topic (Product 1)",
-"tags": "",
-"keywords": "sample",
-"url": "p1_sample6.html",
-"summary": "This is just a sample topic..."
-}
-,
-
-
-
-{
-"title": "Sample 7 Topic (Product 1)",
-"tags": "",
-"keywords": "sample",
-"url": "p1_sample7.html",
-"summary": "This is just a sample topic..."
 }
 ,
 
