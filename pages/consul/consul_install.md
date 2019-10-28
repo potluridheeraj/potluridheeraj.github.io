@@ -16,7 +16,7 @@ folder: consul
 ```shell
 
 # Select required version
-consul_version='1.4.4'
+consul_version='1.6.1'
 
 # Set local/private IP address
 local_ipv4="`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'`"
@@ -147,7 +147,7 @@ echo "################ Adding Acl token #################"
 echo "{
 \"acl\" : {
   \"enabled\" : true,
-  \"default_policy\" :\"deny\",
+  \"default_policy\" :\"allow\",
   \"enable_token_persistence\" : true,
   \"tokens\" : {
               \"master\" : \"398073a8-5091-4d9c-871a-bbbeb030d1f6\"
