@@ -241,6 +241,13 @@
           
           
           
+          
+          
+          <li><a title="Consul UI" href="consul_ui.html">Consul UI</a></li>
+          
+          
+          
+          
       </ul>
    </li>
      
@@ -340,7 +347,7 @@ $('#toc').on('click', 'a', function() {
 <p>Below section will set local ip-address</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="c"># Select required version</span>
-<span class="nv">consul_version</span><span class="o">=</span><span class="s1">'1.4.4'</span>
+<span class="nv">consul_version</span><span class="o">=</span><span class="s1">'1.6.1'</span>
 
 <span class="c"># Set local/private IP address</span>
 <span class="nv">local_ipv4</span><span class="o">=</span><span class="s2">"</span><span class="sb">`</span>ip addr | <span class="nb">grep</span> <span class="s1">'state UP'</span> <span class="nt">-A2</span> | <span class="nb">tail</span> <span class="nt">-n1</span> | <span class="nb">awk</span> <span class="s1">'{print $2}'</span> | <span class="nb">cut</span> <span class="nt">-f1</span>  <span class="nt">-d</span><span class="s1">'/'</span><span class="sb">`</span><span class="s2">"</span>

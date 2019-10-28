@@ -241,6 +241,13 @@
           
           
           
+          
+          
+          <li><a title="Consul UI" href="consul_ui.html">Consul UI</a></li>
+          
+          
+          
+          
       </ul>
    </li>
      
@@ -332,8 +339,9 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Run this to setup DC1 in consul-server</div>
+   <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Run this to setup DC4 in consul-server</div>
 
+<p>We are setting up as DC4 as a dc for this setup</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo tee</span> /etc/consul.d/consul-server.json <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
 {
   "datacenter": "dc4",
@@ -348,10 +356,18 @@ $('#toc').on('click', 'a', function() {
 Bootstrap_expect should be changed based on number of servers.</p>
 </blockquote>
 
+<p>Restart consul server:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service consul restart
+
+service consul status
+</code></pre></div></div>
+
+<p>Once you restart consul server you will see <span style="color:green">Active</span> as soon as you restart and see status</p>
 <h2 id="where-to-next">Where to Next?</h2>
 
 <p>To setup vagrant for Consul, joining nodes into a cluster, and
-interacting with the agent, check out: <a href="consul_dc_setup">Setting up Dc for consul</a>.</p>
+interacting with the agent, check out: <a href="consul_ui">Use consul UI</a>.</p>
 
 
     <div class="tags">

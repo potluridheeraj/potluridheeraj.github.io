@@ -30,9 +30,13 @@ entries:
     - title: Consul entire installation sctipt
       url: /consul_install.html
       output: web, pdf
-    
+
     - title: Consul DC setup for server
       url: /consul_dc_setup
+      output: web, pdf
+
+    - title: Consul UI
+      url: /consul_ui.html
       output: web, pdf
 
   - title: Service Regestration

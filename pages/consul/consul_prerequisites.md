@@ -13,7 +13,7 @@ Below section will set local ip-address
 ```shell
 
 # Select required version
-consul_version='1.4.4'
+consul_version='1.6.1'
 
 # Set local/private IP address
 local_ipv4="`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'`"

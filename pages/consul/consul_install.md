@@ -169,4 +169,4 @@ cat /etc/consul.d/consul-acl.json
 By this time you will have consul available in all servers.    
  
 Joining nodes into a cluster, and
-interacting with the agent, check out: [Setting up Dc for consul](consul_dc_setup).
+interacting with the agent, check out: [See how to setup Data center for consul](consul_dc_setup).

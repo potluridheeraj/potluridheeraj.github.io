@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>News | dp</title>
+<meta name="keywords" content=" consul">
+<title>Consul Dc setup for server | dp</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -132,7 +132,7 @@
                     <ul class="dropdown-menu">
                         
                         
-                        <li><a href="consul">Consul</a></li>
+                        <li class="dropdownActive"><a href="consul">Consul</a></li>
                         
                         
                         
@@ -165,7 +165,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="News">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Consul Dc setup for server">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -191,27 +191,9 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">Learn </li>
+  <li class="sidebarTitle"> </li>
   
   
-  
-      
-  
-  <li>
-      <a title="Home" href="#">Home</a>
-      <ul>
-          
-          
-          
-          <li><a title="Home" href="index.html">Home</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
   
   <li>
       <a title="Consul" href="#">Consul</a>
@@ -219,7 +201,49 @@
           
           
           
-          <li><a title="About Consul" href="about_consul.html">About Consul</a></li>
+          <li><a title="Home" href="consul">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Vagrant setup for consul" href="vagrant_consul">Vagrant setup for consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul pre-requisites" href="consul_prerequisites">Consul pre-requisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install and configure consul" href="consul_install_configure_consul">Install and configure consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul entire installation sctipt" href="consul_install.html">Consul entire installation sctipt</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul DC setup for server" href="consul_dc_setup">Consul DC setup for server</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul UI" href="consul_ui.html">Consul UI</a></li>
           
           
           
@@ -230,12 +254,28 @@
       
   
   <li>
-      <a title="About" href="#">About</a>
+      <a title="Service Regestration" href="#">Service Regestration</a>
       <ul>
           
           
           
-          <li><a title="about" href="about.html">about</a></li>
+          <li><a title="Nginx" href="nginx">Nginx</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Cheat Sheet" href="#">Cheat Sheet</a>
+      <ul>
+          
+          
+          
+          <li><a title="Cheat sheet" href="consul_sheet">Cheat sheet</a></li>
           
           
           
@@ -262,7 +302,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">News</h1>
+   <h1 class="post-title-main">Consul Dc setup for server</h1>
 </div>
 
 
@@ -299,122 +339,18 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">news</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
+   <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Get ip address from /etc/consul.d/consul-acl.json</div>
 
-        
-        
-        
-        
+<p>Through previous installed script you have already enabled “UI” using -&gt; “ui”: true</p>
 
-        <tr><td><a href="samplepost.html">Sample post</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> This is some summary frontmatter for my sample post. </td>
-        </tr>
-        
-        
-        
-        
-        
-        
-        
+<p>Now use usr http://172.60.60.6:8500 (this is initially setup at <a href="vagrant_consul">vagrant</a> setup )</p>
 
-        <tr><td><a href="myupdate.html">Welcome to Jekyll!</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> Theme updates:
+<p><img class="inline" src="images/consul_servers.png" alt="SDK button" /></p>
 
+<h2 id="where-to-next">Where to Next?</h2>
 
-  Permalinks
-  Kramdown
-  URL specified in config file
-  removed PDF output
-  removed some of the alternative layouts
-  added blog feature
-  sidebars configurable per page
-
-
- </td>
-        </tr>
-        
-        
-        
-        
-        
-
-        <tr><td><a href="test-post-from-last-year.html">Test post from last year</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> This is just a test post from the previous year.
-
- </td>
-        </tr>
-        
-        
-        
-
-   </tbody>
-</table>
-
+<p>To setup vagrant for Consul, joining nodes into a cluster, and
+interacting with the agent, check out: <a href="consul_dc_setup">Setting up Dc for consul</a>.</p>
 
 
     <div class="tags">
