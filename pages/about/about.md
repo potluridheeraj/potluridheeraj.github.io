@@ -20,14 +20,27 @@ Bachelor of Technology, Electrical and Computer Engineering
 
 ## WORK EXPERIENCE
 
-IT application Consultant (SAP SuccessFactors, Inc.)
+IT application Consultant (SAP SuccessFactors, Inc.)    
+Interprets specifications created by user group or IT Business Consultants to develop, maintain and support business processes. May work with team of technical consultants to create a system solution to meet the user need. IT Application Consultants will provide the resulting systems, applications, products and services.      
+   Specific Projects:
    * Developed hashicorp consul for service mesh across datacenters.
    * Built multiple  cookbooks for different inhouse projects.
    * Development of Inspec controls for in home products. 
    * Server validation tool development for DataCenters
    * Test the implementation changes.
    * Implement new automation functions
-   * Pipeline process creation for utilizing current development projects across board
+   * Pipeline process creation for utilizing current development projects across board       
+       
+   General responsibilities:
+   * Application specific expert consulting
+   * Performance of feasibility studies / solution reviews (BPS, CA)
+   * Take over responsibility as project lead (BPS, CA)
+   * Define / review technical blueprint for internal IT projects
+   * Configuration and Customizing
+   * Conduct IT internal tests
+   * Provide technical Writing/Documentation
+   * LoB end user training
+   * Third level support (GOPS, CA)
 
 Ethical Hacking and Countermeasures
    * Selected to intern on CEH (Certified Ethical Hacker) by EC-Council (member ID:ECC964555).
