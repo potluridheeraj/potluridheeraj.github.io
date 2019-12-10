@@ -22,7 +22,7 @@ Bachelor of Technology, Electrical and Computer Engineering
 
 IT application Consultant (SAP SuccessFactors, Inc.)
    * Developed hashicorp consul for service mesh across datacenters.
-   * Bulit multipe cookbooks for different inhouse projects.
+   * Built multiple  cookbooks for different inhouse projects.
    * Development of Inspec controls for in home products. 
    * Server validation tool development for DataCenters
    * Test the implementation changes.
