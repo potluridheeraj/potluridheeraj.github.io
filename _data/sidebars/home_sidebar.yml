@@ -46,6 +46,14 @@ entries:
     - title: About Docker
       url: /docker
       output: web, pdf
+  
+  - title: Microsoft
+    output: web, pdf
+    folderitems:
+
+    - title: AZ-204
+      url: /az-204
+      output: web, pdf
 
   - title: Chef
     output: web, pdf

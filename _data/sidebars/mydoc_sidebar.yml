@@ -35,6 +35,14 @@ entries:
       url: /about_consul.html
       output: web, pdf
 
+  - title: Microsoft
+    output: web, pdf
+    folderitems:
+
+    - title: AZ-204
+      url: /az-204.html
+      output: web, pdf
+
   - title: About
     output: web, pdf
     folderitems:
