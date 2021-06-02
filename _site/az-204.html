@@ -383,13 +383,70 @@ Monitor, troubleshoot, and optimize Azure solutions (10-15%)
 Connect to and consume Azure services and third-party services (15-20%)
 </code></pre></div></div>
 
-<h2 id="develop-azure-compute-solutions-25-30">Develop Azure compute solutions (25-30%)</h2>
+<p><a href="https://www.thomasmaurer.ch/2020/03/az-204-study-guide-developing-solutions-for-microsoft-azure/">Guide</a></p>
 
-<p>Quickstart: Create a Windows virtual machine in the Azure portal
-Tutorial: Create and Manage Windows VMs with Azure PowerShell
-How to connect and sign on to an Azure virtual machine running Windows
+<h2 id="develop-azure-compute-solutions-25-30">Develop Azure compute solutions (25-30%)</h2>
+<h3 id="implement-iaas-solutions">Implement IaaS solutions</h3>
+<h4 id="provision-vms"><strong>Provision VMs</strong></h4>
+<p>Quickstart: Create a Windows virtual machine in the Azure portal<br />
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-vm?WT.mc_id=thomasmaurer-blog-thmaure">Tutorial: Create and Manage Windows VMs with Azure PowerShell</a>  <br />
+How to connect and sign on to an Azure virtual machine running Windows<br />
 Quick steps: Create and use an SSH public-private key pair for Linux VMs in Azure</p>
 
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A resource group must be created before a virtual machine</div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzResourceGroup</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Create the VM with New-AzVM.  <br />
+(Windows)</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzVm</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-VirtualNetworkName</span><span class="w"> </span><span class="s2">"myVnet"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-SubnetName</span><span class="w"> </span><span class="s2">"mySubnet"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-SecurityGroupName</span><span class="w"> </span><span class="s2">"myNetworkSecurityGroup"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-PublicIpAddressName</span><span class="w"> </span><span class="s2">"myPublicIpAddress"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-Credential</span><span class="w"> </span><span class="nv">$cred</span><span class="w">
+</span></code></pre></div></div>
+<p>(Linux)</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az vm create <span class="se">\</span>
+  <span class="nt">--resource-group</span> myResourceGroup <span class="se">\</span>
+  <span class="nt">--name</span> myVM <span class="se">\</span>
+  <span class="nt">--image</span> UbuntuLTS <span class="se">\</span>
+  <span class="nt">--admin-username</span> azureuser <span class="se">\</span>
+  <span class="nt">--ssh-key-values</span> mysshkey.pub
+</code></pre></div></div>
+
+<p>Return the public IP address of the VM</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzPublicIpAddress</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="nf">Select</span><span class="w"> </span><span class="nx">IpAddress</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Use the Get-AzVMImagePublisher command to return a list of image publishers.  <br />
+Use the Get-AzVMImageOffer to return a list of image offers. <br />
+If you are using PowerShell and have the Azure PowerShell module installed you may also connect using the Get-AzRemoteDesktopFile cmdlet, as shown below.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzRemoteDesktopFile</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"RgName"</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"VmName"</span><span class="w"> </span><span class="nt">-Launch</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
 <h2 id="getting-started">Getting Started</h2>
 
 <p>pre-requisites:</p>
