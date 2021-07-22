@@ -673,7 +673,7 @@ control 'foo-1' do
   end
 end
 control 'foo-1' do
-  instantiated_images = command('docker ps -qa | xargs docker inspect -f \'{{.Image}}\'').stdout.split
+  instantiated_images = command('docker ps -qa | xargs docker inspect -f \'.Image\'').stdout.split
   all_images = command('docker images -q --no-trunc').stdout.split
   diff = all_images - instantiated_images
 

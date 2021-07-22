@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>News | dp</title>
+<meta name="keywords" content=" Microsoft, Az-204">
+<title>Implement IaaS solutions | dp</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -169,7 +169,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="News">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Implement IaaS solutions">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -195,19 +195,59 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">Learn </li>
+  <li class="sidebarTitle"> </li>
   
   
-  
-      
   
   <li>
-      <a title="Home" href="#">Home</a>
+      <a title="AZ-204" href="#">AZ-204</a>
       <ul>
           
           
           
-          <li><a title="Home" href="index.html">Home</a></li>
+          <li><a title="Home" href="az-204">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Develop Azure compute solutions" href="Develop_Azure_compute_solutions">Develop Azure compute solutions</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul pre-requisites" href="consul_prerequisites">Consul pre-requisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install and configure consul" href="consul_install_configure_consul">Install and configure consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul entire installation sctipt" href="consul_install.html">Consul entire installation sctipt</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul DC setup for server" href="consul_dc_setup">Consul DC setup for server</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul UI" href="consul_ui.html">Consul UI</a></li>
           
           
           
@@ -218,12 +258,12 @@
       
   
   <li>
-      <a title="Consul" href="#">Consul</a>
+      <a title="Develop Azure compute solutions (25-30%)" href="#">Develop Azure compute solutions (25-30%)</a>
       <ul>
           
           
           
-          <li><a title="About Consul" href="about_consul.html">About Consul</a></li>
+          <li class="active"><a title="Implement IaaS solutions" href="Implement_IaaS_solutions">Implement IaaS solutions</a></li>
           
           
           
@@ -234,12 +274,12 @@
       
   
   <li>
-      <a title="Microsoft" href="#">Microsoft</a>
+      <a title="Develop for Azure storage (10-15%)" href="#">Develop for Azure storage (10-15%)</a>
       <ul>
           
           
           
-          <li><a title="AZ-204" href="az-204.html">AZ-204</a></li>
+          <li><a title="Cheat sheet" href="consul_sheet">Cheat sheet</a></li>
           
           
           
@@ -250,12 +290,44 @@
       
   
   <li>
-      <a title="About" href="#">About</a>
+      <a title="Implement Azure security (20-25%)" href="#">Implement Azure security (20-25%)</a>
       <ul>
           
           
           
-          <li><a title="about" href="about.html">about</a></li>
+          <li><a title="Cheat sheet" href="consul_sheet">Cheat sheet</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Monitor, troubleshoot, and optimize Azure solutions (10-15%)" href="#">Monitor, troubleshoot, and optimize Azure solutions (10-15%)</a>
+      <ul>
+          
+          
+          
+          <li><a title="Cheat sheet" href="consul_sheet">Cheat sheet</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Connect to and consume Azure services and third-party services (15-20%)" href="#">Connect to and consume Azure services and third-party services (15-20%)</a>
+      <ul>
+          
+          
+          
+          <li><a title="Cheat sheet" href="consul_sheet">Cheat sheet</a></li>
           
           
           
@@ -282,7 +354,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">News</h1>
+   <h1 class="post-title-main">Implement IaaS solutions</h1>
 </div>
 
 
@@ -319,130 +391,74 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">news</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
+   <h3 id="implement-iaas-solutions">Implement IaaS solutions</h3>
+<h4 id="provision-vms"><strong>Provision VMs</strong></h4>
+<p>Quickstart: Create a Windows virtual machine in the Azure portal<br />
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-vm?WT.mc_id=thomasmaurer-blog-thmaure">Tutorial: Create and Manage Windows VMs with Azure PowerShell</a>  <br />
+How to connect and sign on to an Azure virtual machine running Windows<br />
+Quick steps: Create and use an SSH public-private key pair for Linux VMs in Azure</p>
 
-        
-        
-        
-        
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A resource group must be created before a virtual machine</div>
 
-        <tr><td><a href="samplepost.html">Sample post</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> This is some summary frontmatter for my sample post. </td>
-        </tr>
-        
-        
-        
-        
-        
-        
-        
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzResourceGroup</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w">
+</span></code></pre></div></div>
 
-        <tr><td><a href="myupdate.html">Welcome to Jekyll!</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> Theme updates:
+<p>Create the VM with New-AzVM.  <br />
+(Windows)</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzVm</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-VirtualNetworkName</span><span class="w"> </span><span class="s2">"myVnet"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-SubnetName</span><span class="w"> </span><span class="s2">"mySubnet"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-SecurityGroupName</span><span class="w"> </span><span class="s2">"myNetworkSecurityGroup"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-PublicIpAddressName</span><span class="w"> </span><span class="s2">"myPublicIpAddress"</span><span class="w"> </span><span class="err">`</span><span class="w">
+    </span><span class="nt">-Credential</span><span class="w"> </span><span class="nv">$cred</span><span class="w">
+</span></code></pre></div></div>
+<p>(Linux)</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az vm create <span class="se">\</span>
+  <span class="nt">--resource-group</span> myResourceGroup <span class="se">\</span>
+  <span class="nt">--name</span> myVM <span class="se">\</span>
+  <span class="nt">--image</span> UbuntuLTS <span class="se">\</span>
+  <span class="nt">--admin-username</span> azureuser <span class="se">\</span>
+  <span class="nt">--ssh-key-values</span> mysshkey.pub
+</code></pre></div></div>
 
+<p>Return the public IP address of the VM</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzPublicIpAddress</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="nf">Select</span><span class="w"> </span><span class="nx">IpAddress</span><span class="w">
+</span></code></pre></div></div>
 
-  Permalinks
-  Kramdown
-  URL specified in config file
-  removed PDF output
-  removed some of the alternative layouts
-  added blog feature
-  sidebars configurable per page
+<p>Use the Get-AzVMImagePublisher command to return a list of image publishers.  <br />
+Use the Get-AzVMImageOffer to return a list of image offers. <br />
+If you are using PowerShell and have the Azure PowerShell module installed you may also connect using the Get-AzRemoteDesktopFile cmdlet, as shown below.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzRemoteDesktopFile</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"RgName"</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"VmName"</span><span class="w"> </span><span class="nt">-Launch</span><span class="w">
+</span></code></pre></div></div>
 
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
+</span></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<h2 id="getting-started">Getting Started</h2>
 
- </td>
-        </tr>
-        
-        
-        
-        
-        
-
-        <tr><td><a href="test-post-from-last-year.html">Test post from last year</a></td>
-            <td><span class="label label-primary">Post</span></td>
-            <td> This is just a test post from the previous year.
-
- </td>
-        </tr>
-        
-        
-        
-
-   </tbody>
-</table>
-
+<p>pre-requisites:</p>
+<ul>
+  <li><a href="https://www.vmware.com/">Vm ware</a> or <a href="https://www.virtualbox.org/">Virtualbox</a></li>
+  <li><a href="https://www.vagrantup.com/docs/installation/">Vagrant</a></li>
+</ul>
 
 
     <div class="tags">

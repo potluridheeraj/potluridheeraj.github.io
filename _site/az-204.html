@@ -199,15 +199,55 @@
   
   
   
-      
-  
   <li>
-      <a title="Home" href="#">Home</a>
+      <a title="AZ-204" href="#">AZ-204</a>
       <ul>
           
           
           
-          <li><a title="Home" href="index">Home</a></li>
+          <li class="active"><a title="Home" href="az-204">Home</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Develop Azure compute solutions" href="Develop_Azure_compute_solutions">Develop Azure compute solutions</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul pre-requisites" href="consul_prerequisites">Consul pre-requisites</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Install and configure consul" href="consul_install_configure_consul">Install and configure consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul entire installation sctipt" href="consul_install.html">Consul entire installation sctipt</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul DC setup for server" href="consul_dc_setup">Consul DC setup for server</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Consul UI" href="consul_ui.html">Consul UI</a></li>
           
           
           
@@ -218,15 +258,24 @@
       
   
   <li>
-      <a title="Consul" href="#">Consul</a>
+      <a title="Develop Azure compute solutions (25-30%)" href="#">Develop Azure compute solutions (25-30%)</a>
       <ul>
           
           
           
-          <li><a title="About consul" href="consul">About consul</a></li>
+          <li><a title="Implement IaaS solutions" href="Implement_IaaS_solutions">Implement IaaS solutions</a></li>
           
           
           
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Develop for Azure storage (10-15%)" href="#">Develop for Azure storage (10-15%)</a>
+      <ul>
           
           
           
@@ -241,12 +290,12 @@
       
   
   <li>
-      <a title="Docker" href="#">Docker</a>
+      <a title="Implement Azure security (20-25%)" href="#">Implement Azure security (20-25%)</a>
       <ul>
           
           
           
-          <li><a title="About Docker" href="docker">About Docker</a></li>
+          <li><a title="Cheat sheet" href="consul_sheet">Cheat sheet</a></li>
           
           
           
@@ -257,12 +306,12 @@
       
   
   <li>
-      <a title="Microsoft" href="#">Microsoft</a>
+      <a title="Monitor, troubleshoot, and optimize Azure solutions (10-15%)" href="#">Monitor, troubleshoot, and optimize Azure solutions (10-15%)</a>
       <ul>
           
           
           
-          <li class="active"><a title="AZ-204" href="az-204">AZ-204</a></li>
+          <li><a title="Cheat sheet" href="consul_sheet">Cheat sheet</a></li>
           
           
           
@@ -273,44 +322,12 @@
       
   
   <li>
-      <a title="Chef" href="#">Chef</a>
+      <a title="Connect to and consume Azure services and third-party services (15-20%)" href="#">Connect to and consume Azure services and third-party services (15-20%)</a>
       <ul>
           
           
           
-          <li><a title="Cheat sheet" href="chef_sheet">Cheat sheet</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="Github" href="#">Github</a>
-      <ul>
-          
-          
-          
-          <li><a title="Cheat sheet" href="github_sheet">Cheat sheet</a></li>
-          
-          
-          
-          
-      </ul>
-   </li>
-     
-      
-  
-  <li>
-      <a title="About" href="#">About</a>
-      <ul>
-          
-          
-          
-          <li><a title="About" href="about">About</a></li>
+          <li><a title="Cheat sheet" href="consul_sheet">Cheat sheet</a></li>
           
           
           
@@ -377,82 +394,97 @@ $('#toc').on('click', 'a', function() {
    <p>The high-level view of the skills measured in the exam:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Develop Azure compute solutions (25-30%)
-Develop for Azure storage (10-15%)
+Develop for Azure storage (15-20%)
 Implement Azure security (20-25%)
-Monitor, troubleshoot, and optimize Azure solutions (10-15%)
+Monitor, troubleshoot, and optimize Azure solutions (15-20%)
 Connect to and consume Azure services and third-party services (15-20%)
 </code></pre></div></div>
 
 <p><a href="https://www.thomasmaurer.ch/2020/03/az-204-study-guide-developing-solutions-for-microsoft-azure/">Guide</a></p>
 
 <h2 id="develop-azure-compute-solutions-25-30">Develop Azure compute solutions (25-30%)</h2>
-<h3 id="implement-iaas-solutions">Implement IaaS solutions</h3>
-<h4 id="provision-vms"><strong>Provision VMs</strong></h4>
-<p>Quickstart: Create a Windows virtual machine in the Azure portal<br />
-<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-vm?WT.mc_id=thomasmaurer-blog-thmaure">Tutorial: Create and Manage Windows VMs with Azure PowerShell</a>  <br />
-How to connect and sign on to an Azure virtual machine running Windows<br />
-Quick steps: Create and use an SSH public-private key pair for Linux VMs in Azure</p>
-
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A resource group must be created before a virtual machine</div>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzResourceGroup</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Create the VM with New-AzVM.  <br />
-(Windows)</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzVm</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-VirtualNetworkName</span><span class="w"> </span><span class="s2">"myVnet"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-SubnetName</span><span class="w"> </span><span class="s2">"mySubnet"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-SecurityGroupName</span><span class="w"> </span><span class="s2">"myNetworkSecurityGroup"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-PublicIpAddressName</span><span class="w"> </span><span class="s2">"myPublicIpAddress"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-Credential</span><span class="w"> </span><span class="nv">$cred</span><span class="w">
-</span></code></pre></div></div>
-<p>(Linux)</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az vm create <span class="se">\</span>
-  <span class="nt">--resource-group</span> myResourceGroup <span class="se">\</span>
-  <span class="nt">--name</span> myVM <span class="se">\</span>
-  <span class="nt">--image</span> UbuntuLTS <span class="se">\</span>
-  <span class="nt">--admin-username</span> azureuser <span class="se">\</span>
-  <span class="nt">--ssh-key-values</span> mysshkey.pub
-</code></pre></div></div>
-
-<p>Return the public IP address of the VM</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzPublicIpAddress</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="nf">Select</span><span class="w"> </span><span class="nx">IpAddress</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Use the Get-AzVMImagePublisher command to return a list of image publishers.  <br />
-Use the Get-AzVMImageOffer to return a list of image offers. <br />
-If you are using PowerShell and have the Azure PowerShell module installed you may also connect using the Get-AzRemoteDesktopFile cmdlet, as shown below.</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzRemoteDesktopFile</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"RgName"</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"VmName"</span><span class="w"> </span><span class="nt">-Launch</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<h2 id="getting-started">Getting Started</h2>
-
-<p>pre-requisites:</p>
+<h3 id="implement-iaas-solutions"><a href="https:/dheerajpotluri.com/Implement_IaaS_solutions">Implement IaaS solutions</a></h3>
 <ul>
-  <li><a href="https://www.vmware.com/">Vm ware</a> or <a href="https://www.virtualbox.org/">Virtualbox</a></li>
-  <li><a href="https://www.vagrantup.com/docs/installation/">Vagrant</a></li>
+  <li>provision virtual machines (VMs)</li>
+  <li>configure, validate, and deploy ARM templates</li>
+  <li>configure container images for solutions</li>
+  <li>publish an image to the Azure Container Registry</li>
+  <li>run containers by using Azure Container Instance</li>
+</ul>
+
+<h3 id="create-azure-app-service-web-apps">Create Azure App Service Web Apps</h3>
+<ul>
+  <li>create an Azure App Service Web App</li>
+  <li>enable diagnostics logging</li>
+  <li>deploy code to a web app</li>
+  <li>configure web app settings including SSL, API settings, and connection strings</li>
+  <li>implement autoscaling rules including scheduled autoscaling and autoscaling by</li>
+  <li>operational or system metrics</li>
+</ul>
+
+<h3 id="implement-azure-functions">Implement Azure functions</h3>
+<ul>
+  <li>create and deploy Azure Functions apps</li>
+  <li>implement input and output bindings for a function</li>
+  <li>implement function triggers by using data operations, timers, and webhooks</li>
+  <li>implement Azure Durable Functions</li>
+  <li>implement custom handlers</li>
+</ul>
+
+<h2 id="develop-for-azure-storage-15-20">Develop for Azure storage (15-20%)</h2>
+<h3 id="develop-solutions-that-use-cosmos-db-storage">Develop solutions that use Cosmos DB storage</h3>
+<ul>
+  <li>select the appropriate API and SDK for a solution</li>
+  <li>implement partitioning schemes and partition keys</li>
+  <li>perform operations on data and Cosmos DB containers</li>
+  <li>set the appropriate consistency level for operations</li>
+  <li>manage change feed notifications
+    <h3 id="develop-solutions-that-use-blob-storage">Develop solutions that use blob storage</h3>
+  </li>
+  <li>move items in Blob storage between storage accounts or containers</li>
+  <li>set and retrieve properties and metadata</li>
+  <li>perform operations on data by using the appropriate SDK</li>
+  <li>implement storage policies, and data archiving and retention</li>
+</ul>
+
+<h2 id="implement-azure-security-20-25">Implement Azure security (20-25%)</h2>
+<h3 id="implement-user-authentication-and-authorization">Implement user authentication and authorization</h3>
+<ul>
+  <li>authenticate and authorize users by using the Microsoft Identity platform</li>
+  <li>authenticate and authorize users and apps by using Azure Active Directory</li>
+  <li>create and implement shared access signatures
+    <h3 id="implement-secure-cloud-solutions">Implement secure cloud solutions</h3>
+  </li>
+  <li>secure app configuration data by using App Configuration Azure Key Vault</li>
+  <li>develop code that uses keys, secrets, and certificates stored in Azure Key Vault</li>
+  <li>implement Managed Identities for Azure resources</li>
+  <li>implement solutions that interact with Microsoft Graph</li>
+</ul>
+
+<h2 id="monitor-troubleshoot-and-optimize-azure-solutions-15-20">Monitor, troubleshoot, and optimize Azure solutions (15-20%)</h2>
+<h3 id="integrate-caching-and-content-delivery-within-solutions">Integrate caching and content delivery within solutions</h3>
+<ul>
+  <li>configure cache and expiration policies for Azure Redis Cache</li>
+  <li>implement secure and optimized application cache patterns including data sizing,connections, encryption, and expiration Instrument solutions to support monitoring and logging</li>
+  <li>configure an app or service to use Application Insights</li>
+  <li>analyze and troubleshoot solutions by using Azure Monitor</li>
+  <li>implement Application Insights web tests and alerts</li>
+</ul>
+
+<h2 id="connect-to-and-consume-azure-services-and-third-party-services-15-20">Connect to and consume Azure services and third-party services (15-20%)</h2>
+<h3 id="implement-api-management">Implement API Management</h3>
+<ul>
+  <li>create an APIM instance</li>
+  <li>configure authentication for APIs</li>
+  <li>define policies for APIs
+    <h3 id="develop-event-based-solutions">Develop event-based solutions</h3>
+  </li>
+  <li>implement solutions that use Azure Event Grid</li>
+  <li>implement solutions that use Azure Event Hubs
+    <h3 id="develop-message-based-solutions">Develop message-based solutions</h3>
+  </li>
+  <li>implement solutions that use Azure Service Bus</li>
+  <li>implement solutions that use Azure Queue Storage queues</li>
 </ul>
 
 

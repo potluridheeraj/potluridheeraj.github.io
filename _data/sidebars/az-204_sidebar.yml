@@ -1,0 +1,81 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: Sidebar
+  product: 
+  version:
+  folders:
+
+  - title: AZ-204
+    output: web, pdf
+    folderitems:
+    
+    - title: Home
+      url: /az-204
+      output: web
+    
+    - title: Develop Azure compute solutions
+      url: Develop_Azure_compute_solutions
+      output: web, pdf
+      
+    - title: Consul pre-requisites
+      url: /consul_prerequisites
+      output: web, pdf
+    
+    - title: Install and configure consul
+      url: /consul_install_configure_consul
+      output: web, pdf
+
+    - title: Consul entire installation sctipt
+      url: /consul_install.html
+      output: web, pdf
+
+    - title: Consul DC setup for server
+      url: /consul_dc_setup
+      output: web, pdf
+
+    - title: Consul UI
+      url: /consul_ui.html
+      output: web, pdf
+
+  - title: Develop Azure compute solutions (25-30%)
+    output: web, pdf
+
+    folderitems:
+    - title: Implement IaaS solutions
+      url: /Implement_IaaS_solutions
+      output: web, pdf
+  
+  - title: Develop for Azure storage (10-15%)
+    output: web, pdf
+
+    folderitems:
+    - title: Cheat sheet 
+      url: /consul_sheet
+      output: web, pdf
+  
+  - title: Implement Azure security (20-25%)
+    output: web, pdf
+
+    folderitems:
+    - title: Cheat sheet 
+      url: /consul_sheet
+      output: web, pdf
+ 
+  - title: Monitor, troubleshoot, and optimize Azure solutions (10-15%)
+    output: web, pdf
+
+    folderitems:
+    - title: Cheat sheet 
+      url: /consul_sheet
+      output: web, pdf
+
+  - title: Connect to and consume Azure services and third-party services (15-20%)
+    output: web, pdf
+
+    folderitems:
+    - title: Cheat sheet 
+      url: /consul_sheet
+      output: web, pdf
+
