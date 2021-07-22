@@ -357,20 +357,22 @@ $('#toc').on('click', 'a', function() {
     
 
    <h2 id="implement-iaas-solutions">Implement IaaS solutions</h2>
-<h3 id="provision-vms"><strong>Provision VMs</strong></h3>
-<h4 id="test">test</h4>
+<h3 id="provision-vms">Provision VMs</h3>
+
 <p>Quickstart: Create a Windows virtual machine in the Azure portal<br />
-<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-vm?WT.mc_id=thomasmaurer-blog-thmaure">Tutorial: Create and Manage Windows VMs with Azure PowerShell</a>  <br />
-How to connect and sign on to an Azure virtual machine running Windows<br />
-Quick steps: Create and use an SSH public-private key pair for Linux VMs in Azure</p>
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-vm?WT.mc_id=thomasmaurer-blog-thmaure">Tutorial: Create and Manage Windows VMs with Azure PowerShell</a></p>
+
+<p>How to connect and sign on to an Azure virtual machine running Windows<br />
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?WT.mc_id=thomasmaurer-blog-thmaure">Quick steps: Create and use an SSH public-private key pair for Linux VMs in Azure</a></p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A resource group must be created before a virtual machine</div>
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzResourceGroup</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Create the VM with New-AzVM.  <br />
-(Windows)</p>
+<h4 id="create-the-vm">Create the VM.</h4>
+
+<p>(Windows)</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzVm</span><span class="w"> </span><span class="err">`</span><span class="w">
     </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
     </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
@@ -395,36 +397,79 @@ Quick steps: Create and use an SSH public-private key pair for Linux VMs in Azur
    </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="nf">Select</span><span class="w"> </span><span class="nx">IpAddress</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Use the Get-AzVMImagePublisher command to return a list of image publishers.  <br />
-Use the Get-AzVMImageOffer to return a list of image offers. <br />
-If you are using PowerShell and have the Azure PowerShell module installed you may also connect using the Get-AzRemoteDesktopFile cmdlet, as shown below.</p>
+<p><strong>Get-AzVMImagePublisher</strong> command to return a list of image publishers.  <br />
+<strong>Get-AzVMImageOffer</strong> to return a list of image offers.</p>
+
+<p>If you are using PowerShell and have the Azure PowerShell module installed you may also connect using the Get-AzRemoteDesktopFile cmdlet, as shown below.</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzRemoteDesktopFile</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"RgName"</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"VmName"</span><span class="w"> </span><span class="nt">-Launch</span><span class="w">
 </span></code></pre></div></div>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span><span class="err">``````</span><span class="nf">powershell</span><span class="w">
-</span></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<h2 id="getting-started">Getting Started</h2>
+<h4 id="resize-a-vm">Resize a VM</h4>
 
-<p>pre-requisites:</p>
-<ul>
-  <li><a href="https://www.vmware.com/">Vm ware</a> or <a href="https://www.virtualbox.org/">Virtualbox</a></li>
-  <li><a href="https://www.vagrantup.com/docs/installation/">Vagrant</a></li>
-</ul>
+<p>Before resizing a VM, check if the size you want is available on the current VM cluster. The Get-AzVMSize command returns a list of sizes.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzVMSize</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If the size is available, the VM can be resized from a powered-on state, however it is rebooted during the operation.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$vm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Get-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-VMName</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w">
+</span><span class="nv">$vm</span><span class="o">.</span><span class="nf">HardwareProfile</span><span class="o">.</span><span class="nf">VmSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Standard_DS3_v2"</span><span class="w">
+</span><span class="nf">Update-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-VM</span><span class="w"> </span><span class="nv">$vm</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="bs-callout bs-callout-primary">If the size you want isn’t available on the current cluster, the VM needs to be deallocated before the resize operation can occur. Deallocating a VM will remove any data on the temp disk, and the public IP address will change unless a static IP address is being used. </div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Stop-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w"> </span><span class="nt">-Force</span><span class="w">
+</span><span class="nv">$vm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Get-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-VMName</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w">
+</span><span class="nv">$vm</span><span class="o">.</span><span class="nf">HardwareProfile</span><span class="o">.</span><span class="nf">VmSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Standard_E2s_v3"</span><span class="w">
+</span><span class="nf">Update-AzVM</span><span class="w"> </span><span class="nt">-VM</span><span class="w"> </span><span class="nv">$vm</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">
+</span><span class="nf">Start-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="err">`</span><span class="w">
+   </span><span class="nt">-Name</span><span class="w"> </span><span class="nv">$vm</span><span class="o">.</span><span class="nf">name</span><span class="w">
+</span></code></pre></div></div>
+<h3 id="arm-templates">ARM Templates</h3>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> ARM Templates is used to create a template which can be used to create apps, VM’s or almost anything in Azure </div>
+
+<p>Template file
+Within your template, you can write template expressions that extend the capabilities of JSON. These expressions make use of the functions provided by Resource Manager.</p>
+
+<p>The template has the following sections:</p>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/parameters"><strong>Parameters</strong></a> - Provide values during deployment that allow the same template to be used with different environments.</p>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/variables"><strong>Variables</strong></a> - Define values that are reused in your templates. They can be constructed from parameter values.</p>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/user-defined-functions"><strong>User-defined functions</strong></a> - Create customized functions that simplify your template.</p>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/resource-declaration"><strong>Resources</strong></a> - Specify the resources to deploy.</p>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/outputs?tabs=azure-powershell"><strong>Outputs</strong></a> - Return values from the deployed resources.</p>
+
+<p><strong>Example JSON</strong></p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"resources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Microsoft.Storage/storageAccounts"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"apiVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-01"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mystorageaccount"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"westus"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard_LRS"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"StorageV2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
 
     <div class="tags">
