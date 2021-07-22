@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" Cheetsheet">
+<title>Inspec Cheetsheet | dp</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Documentation" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> </span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="https://github.com/potluridheeraj" target="_blank" rel="noopener">GitHub</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="consul">Consul</a></li>
+                        
+                        
+                        
+                        <li><a href="docker">Docker</a></li>
+                        
+                        
+                        
+                        <li><a href="microsoft">Microsoft</a></li>
+                        
+                        
+                        
+                        <li><a href="reference.html">References</a></li>
+                        
+                        
+                        
+                        <li><a href="about">About</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Inspec Cheetsheet">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+      
+  
+  <li>
+      <a title="Home" href="#">Home</a>
+      <ul>
+          
+          
+          
+          <li><a title="Home" href="index">Home</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Consul" href="#">Consul</a>
+      <ul>
+          
+          
+          
+          <li><a title="About consul" href="consul">About consul</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Cheat sheet" href="consul_sheet">Cheat sheet</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Docker" href="#">Docker</a>
+      <ul>
+          
+          
+          
+          <li><a title="About Docker" href="docker">About Docker</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Microsoft" href="#">Microsoft</a>
+      <ul>
+          
+          
+          
+          <li><a title="AZ-204" href="az-204">AZ-204</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Chef" href="#">Chef</a>
+      <ul>
+          
+          
+          
+          <li><a title="Cheat sheet" href="chef_sheet">Cheat sheet</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Github" href="#">Github</a>
+      <ul>
+          
+          
+          
+          <li><a title="Cheat sheet" href="github_sheet">Cheat sheet</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="About" href="#">About</a>
+      <ul>
+          
+          
+          
+          <li><a title="About" href="about">About</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Inspec Cheetsheet</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+   <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Controls
+control <span class="s1">'sshd-8'</span> <span class="k">do
+  </span>impact 0.6
+  title <span class="s1">'Server: Configure the service port'</span>
+  desc <span class="s1">'Always specify which port the SSH server should listen.'</span>
+  desc <span class="s1">'rationale'</span>, <span class="s1">'This ensures that there are no unexpected settings'</span> <span class="c"># Requires InSpec &gt;=2.3.4</span>
+  tag <span class="s1">'ssh'</span>,<span class="s1">'sshd'</span>,<span class="s1">'openssh-server'</span>
+  tag cce: <span class="s1">'CCE-27072-8'</span>
+  ref <span class="s1">'NSA-RH6-STIG - Section 3.5.2.1'</span>, url: <span class="s1">'https://www.nsa.gov/ia/_files/os/redhat/rhel5-guide-i731.pdf'</span>
+
+  describe sshd_config <span class="k">do
+    </span>its<span class="o">(</span><span class="s1">'Port'</span><span class="o">)</span> <span class="o">{</span> should cmp 22 <span class="o">}</span>
+  end
+end
+</code></pre></div></div>
+<p>where</p>
+
+<p>‘sshd-8’ is the name of the control<br />
+impact, title, and desc define metadata that fully describes the importance of the control, its purpose, with a succinct and complete description<br />
+desc when given only one argument it sets the default description. As of InSpec 2.3.4, when given 2 arguments (see: ‘rationale’) it will use the first argument as a header when rendering in Automate<br />
+impact is a string, or numeric that measures the importance of the compliance results. Valid strings for impact are none, low, medium, high, and critical. The values are based off CVSS 3.0. A numeric value must be between 0.0 and 1.0. The value ranges are:<br />
+0.0 to &lt;0.01 these are controls with no impact, they only provide information<br />
+0.01 to &lt;0.4 these are controls with low impact<br />
+0.4 to &lt;0.7 these are controls with medium impact<br />
+0.7 to &lt;0.9 these are controls with high impact<br />
+0.9 to 1.0 these are critical controls<br />
+tag is optional meta-information with with key or key-value pairs<br />
+ref is a reference to an external document<br />
+describe is a block that contains at least one test. A control block must contain at least one describe block, but may contain as many as required<br />
+sshd_config is an InSpec resource. For the full list of InSpec resources, see InSpec resource documentation<br />
+its(‘Port’) is the matcher; { should eq ‘22’ } is the test. A describe block must contain at least one matcher, but may contain as many as required<br />
+Resource properties<br />
+You can use a string with dots to specify a nested attribute (i.e. an attribute of a property of the resource).</p>
+
+<p>Note:
+its only supports universal matchers</p>
+
+<p>its(‘last_changes.min’) { should be &lt; Date.today - 90 - Date.new(1970,1,1) }
+its(‘min_days.uniq’) { should eq [0] }
+its(‘max_days.max’) { should be &lt; 90 }
+its(‘warn_days.uniq.count’) { should eq 1 }
+its(‘warn_days.uniq.first’) { should eq 7 }
+its(‘expiry_dates.compact’) { should be_empty }
+its(‘ingest.first.processors.count’) { should be &gt;= 1 }
+Matchers
+The following InSpec-supported universal matchers are available:</p>
+
+<p>be - make numeric comparisons
+be_in - look for the property value in a list
+cmp - general-use equality (try this first)
+eq - type-specific equality
+include - look for an expected value in a list-valued property
+match - look for patterns in text using regular expressions
+Examples:</p>
+
+<p>should be_nil.or eq(‘None’)
+should be_nil.or be &gt;= 114688
+should eq(‘sha256’).or eq(‘sha384’).or eq(‘sha512’)
+should be_nil.or eq(‘True’).or eq(‘auto’)
+should be &lt;= MANAGEABLE_CONTAINER_NUMBER
+should be_empty
+should_not contain_duplicates
+should include rule
+should_not include(‘’)
+should_not include(‘.’)
+should match(/^root|syslog$/)
+should match(/^INCREMENTAL|INCREMENTAL_ASYNC$/)
+should match(/^\s*?SSLHonorCipherOrder\s+?On/i)
+should match(/-FollowSymLinks/).or match(/+SymLinksIfOwnerMatch/)
+should cmp ‘root’
+should be &lt; Date.today - 90 - Date.new(1970,1,1)
+Attributes
+An attribute is a parameter that InSpec reads from a YAML file provided on the command line. You can use this feature either to change a profile’s behavior by passing different attribute files or to store secrets that should not be directly present in a profile.</p>
+
+<h1 id="attributes">attributes</h1>
+<p>CLIENT_MAX_BODY_SIZE = attribute(
+  ‘client_max_body_size’,
+  description: ‘Sets the maximum allowed size of the client request body, specified in the “Content-Length” request header field. If the size in a request exceeds the configured value, the 413 (Request Entity Too Large) error is returned to the client. Please be aware that browsers cannot correctly display this error. Setting size to 0 disables checking of client request body size.’,
+  default: ‘1k’
+)</p>
+
+<p>CLIENT_BODY_BUFFER_SIZE = attribute(
+  ‘client_body_buffer_size’,
+  description: ‘Sets buffer size for reading client request body. In case the request body is larger than the buffer, the whole body or only its part is written to a temporary file. By default, buffer size is equal to two memory pages. This is 8K on x86, other 32-bit platforms, and x86-64. It is usually 16K on other 64-bit platforms.’,
+  default: ‘1k’
+)
+Best Practices
+Avoid native ruby IO functions
+Avoid:</p>
+
+<p>File.new(“filename”).read
+File.read(“filename”)
+IO.read(“filename”)
+Use:</p>
+
+<p>file(“filename”)
+Edge Cases
+Test not implemented
+control ‘foo-1’ do
+  describe ‘bar-test’ do
+    skip ‘Not implemented yet’
+  end
+end
+only_if</p>
+<h1 id="avoid-putting-conditionals-outside-control-blocks">Avoid putting conditionals outside control blocks</h1>
+<p>if package(‘..’).installed?
+  control ‘redis-1’ do
+    …
+  end
+end</p>
+
+<h1 id="instead-always-enclose-it-in-a-control-or-better-in-a-describe-block">Instead, always enclose it in a control (or better in a describe block):</h1>
+<p>control ‘redis1’ do
+  only_if(‘redis is not installed.’) do
+    command(‘redis-cli’).exist?
+  end</p>
+
+<p>describe command(‘redis-cli SET test_inspec “HELLO”’) do
+    its(‘stdout’) { should match /OK/ }
+  end
+end</p>
+
+<h1 id="-">—-</h1>
+
+<h1 id="format">Format</h1>
+<p>only_if { <something>.exists? }
+only_if { <something> <comparison operator=""> <state> }</state></comparison></something></something></p>
+
+<h1 id="examples">Examples</h1>
+<p>only_if { HTTP_METHODS_CHECK != false }
+only_if { os.redhat? }
+only_if { os.name != ‘fedora’ &amp;&amp; !container_execution }</p>
+
+<p>control “package-test1” do
+  only_if { package(‘..’).installed? }
+end</p>
+
+<p>only_if do
+  # Abort if service not found
+  command(apache.service).exist?
+end</p>
+
+<h1 id="only-run-test-if-criteria-match">Only run test if criteria match</h1>
+<p>control ‘foo-1’ do
+  only_if { os[:family] != ‘ubuntu’ &amp;&amp; os[:release] != ‘16.04’ } || only_if { os[:family] != ‘debian’ &amp;&amp; os[:release] != ‘8’ }
+  describe service(apache.service) do
+    it { should be_enabled }
+  end
+end</p>
+
+<p>control ‘foo-2’ do
+  logging_conf = file(“#{keystone_conf_dir}/logging.conf”)</p>
+
+<p>if logging_conf.exist?
+    describe logging_conf do
+      its(‘mode’) { should cmp ‘0640’ }
+    end
+  end
+end</p>
+
+<h1 id="run-test-if-file-does-not-exist">run test if file does not exist</h1>
+<p>control ‘os-10’ do
+  impact 1.0
+  title ‘CIS: Disable unused filesystems’
+  desc ‘1.1.1 Ensure mounting of cramfs, freevxfs, jffs2, hfs, hfsplus, squashfs, udf, FAT’
+  only_if { !container_execution }
+  efi_dir = inspec.file(‘/sys/firmware/efi’)
+  describe file(‘/etc/modprobe.d/dev-sec.conf’) do
+    its(:content) { should match ‘install cramfs /bin/true’ }
+    its(:content) { should match ‘install freevxfs /bin/true’ }
+    its(:content) { should match ‘install jffs2 /bin/true’ }
+    its(:content) { should match ‘install hfs /bin/true’ }
+    its(:content) { should match ‘install hfsplus /bin/true’ }
+    its(:content) { should match ‘install squashfs /bin/true’ }
+    its(:content) { should match ‘install udf /bin/true’ }
+    # if efi is active, do not disable vfat. otherwise the system
+    # won’t boot anymore
+    unless efi_dir.exist?
+      its(:content) { should match ‘install vfat /bin/true’ }
+    end
+  end
+end
+Default value</p>
+<h1 id="set-default-value">Set default value</h1>
+<p>shadow_group = ‘root’
+shadow_group = ‘shadow’ if os.debian? || os.suse?</p>
+
+<h1 id="single-lines-can-be-broken-up-with-a-trailing-backslash">Single lines can be broken up with a trailing backslash</h1>
+<p>audit_pkg = os.redhat? \
+         || os.suse? \
+         || os.name == ‘amazon’ \
+         || os.name == ‘fedora’ ? ‘audit’ : ‘auditd’</p>
+
+<h1 id="in-a-control">In a control</h1>
+<p>control ‘foo-1’ do
+ if os.redhat? || os.name == ‘fedora’
+    describe file(‘/etc/shadow’) do
+      it { should_not be_writable.by(‘owner’) }
+      it { should_not be_readable.by(‘owner’) }
+    end
+  else
+    describe file(‘/etc/shadow’) do
+      it { should be_writable.by(‘owner’) }
+      it { should be_readable.by(‘owner’) }
+    end
+  end
+end
+Hide sensitive output
+describe file(‘/tmp/mysecretfile’), :sensitive do
+  its(‘content’) { should match /secret_info/ }
+end
+Pass if one test succeeds
+With InSpec it is possible to check if at least one of a collection of checks is true. For example: If a setting is configured in two different locations, you may want to test if either configuration A or configuration B have been set. This is accomplished via describe.one. It defines a block of tests with at least one valid check.</p>
+
+<p>describe.one do
+  describe ConfigurationA do
+    its(‘setting_1’) { should eq true }
+  end</p>
+
+<p>describe ConfigurationB do
+    its(‘setting_2’) { should eq true }
+  end
+end
+Complex examples
+Iterate over whitespace array
+hab_env_vars = %w(
+  HAB_AUTH_TOKEN
+  HAB_CACHE_KEY_PATH
+  HAB_DEPOT_URL
+  HAB_ORG
+  HAB_ORIGIN
+  HAB_ORIGIN_KEYS
+  HAB_RING
+  HAB_RING_KEY
+  HAB_STUDIOS_HOME
+  HAB_STUDIO_ROOT
+  HAB_USER
+)</p>
+
+<p>hab_env_vars.each do |e|
+  describe os_env(e) do
+    its(‘content’) { should eq nil }
+  end
+end
+Prepare loop and iterate over combined elements
+module_path = File.join(apache.conf_dir, ‘/mods-enabled/’)
+loaded_modules = command(‘ls ‘ « module_path).stdout.split.keep_if { |file_name| /.load/.match(file_name) }</p>
+
+<p>loaded_modules.each do |id|
+  describe file(File.join(module_path, id)) do
+    its(‘content’) { should_not match(/^\s<em>?LoadModule\s+?dav_module/) }
+    its(‘content’) { should_not match(/^\s</em>?LoadModule\s+?cgid_module/) }
+    its(‘content’) { should_not match(/^\s<em>?LoadModule\s+?cgi_module/) }
+    its(‘content’) { should_not match(/^\s</em>?LoadModule\s+?include_module/) }
+  end
+end</p>
+
+<h1 id="--1">—-</h1>
+
+<h1 id="use-the-inspec-resource-to-enumerate-ids-then-test-in-depth">Use the InSpec resource to enumerate IDs, then test in-depth</h1>
+<p>docker.containers.running?.ids.each do |id|
+  describe docker.object(id) do
+    its(‘State.Health.Status’) { should eq ‘healthy’ }
+  end
+end
+Parse nginx config</p>
+<h1 id="determine-all-required-paths">determine all required paths</h1>
+<p>nginx_path          = ‘/etc/nginx’
+nginx_conf          = File.join(nginx_path, ‘nginx.conf’)
+nginx_confd         = File.join(nginx_path, ‘conf.d’)
+nginx_enabled       = File.join(nginx_path, ‘sites-enabled’)
+nginx_parsed_config = command(‘nginx -T’).stdout</p>
+
+<p>options = {
+  assignment_regex: /^\s<em>([^:]</em>?)\s<em>\ \s</em>(.<em>?)\s</em>;$/
+}</p>
+
+<p>options_add_header = {
+  assignment_regex: /^\s<em>([^:]</em>?)\s<em>\ \s</em>(.<em>?)\s</em>;$/,
+  multiple_values: true
+}</p>
+
+<p>control ‘nginx-07’ do
+  describe user(nginx_lib.valid_users) do
+    it { should exist }
+  end</p>
+
+<p>describe parse_config_file(nginx_conf, options) do
+    its(‘user’) { should eq nginx_lib.valid_users }
+  end</p>
+
+<p>describe parse_config_file(nginx_conf, options) do
+    its(‘group’) { should_not eq ‘root’ }
+  end
+end</p>
+
+<p>control ‘nginx-08’ do
+  impact 1.0
+  title ‘Prevent clickjacking’
+  desc ‘Do not allow the browser to render the page inside an frame or iframe.’
+  describe parse_config(nginx_parsed_config, options_add_header) do
+    its(‘add_header’) { should include ‘X-Frame-Options SAMEORIGIN’ }
+  end
+end</p>
+
+<p>control ‘nginx-09’ do
+  impact 1.0
+  title ‘Enable Cross-site scripting filter’
+  desc ‘This header is used to configure the built in reflective XSS protection. This tells the browser to block the response if it detects an attack rather than sanitising the script.’
+  describe parse_config(nginx_parsed_config, options_add_header) do
+    its(‘add_header’) { should include ‘X-XSS-Protection “1; mode=block”’ }
+  end
+end</p>
+
+<p>control ‘nginx-10’ do
+  impact 1.0
+  title ‘Disable content-type sniffing’
+  desc ‘It prevents browser from trying to mime-sniff the content-type of a response away from the one being declared by the server. It reduces exposure to drive-by downloads and the risks of user uploaded content that, with clever naming, could be treated as a different content-type, like an executable.’
+  describe parse_config(nginx_parsed_config, options_add_header) do
+    its(‘add_header’) { should include ‘X-Content-Type-Options nosniff’ }
+  end
+end
+Validate ini file
+control ‘check-identity-04’ do
+  title ‘Strong hashing algorithms should be used for PKI tokens’
+  ref ‘http://docs.openstack.org/security-guide/identity/checklist.html#check-identity-04-does-identity-use-strong-hashing-algorithms-for-pki-tokens’</p>
+
+<p>keystone_conf = ini(keystone_conf_file)</p>
+
+<p>only_if do
+    keystone_conf.value([‘token’, ‘provider’]) == ‘pki’
+  end</p>
+
+<p>describe ini(keystone_conf_file) do
+    its([‘token’, ‘hash_algorithm’]) { should eq(‘sha256’).or eq(‘sha384’).or eq(‘sha512’) }
+  end
+end</p>
+
+<p>control ‘foo-1’ do
+  describe ini(keystone_conf_file) do
+    its([‘oslo_middleware’, ‘max_request_body_size’]) { should be_nil.or be &gt;= 114688 }
+  end</p>
+
+<p>describe ini(“#{conf_dir}/ceilometer.conf”) do
+    its([‘DEFAULT’, ‘auth_strategy’]) { should be_nil.or eq ‘keystone’ }
+    its([‘keystone_authtoken’, ‘auth_uri’]) { should match(/^https:/) }
+  end</p>
+
+<p>describe ini(keystone_conf_file) do
+    its([‘DEFAULT’, ‘nas_secure_file_permissions’]) { should be_nil.or eq(‘True’).or eq(‘auto’) }
+  end
+end
+Filtering
+Terminology
+Filter statement
+When using a plural resource, a filter statement is used to select individual test subjects using filter criteria. A filter statement almost always is indicated by the keyword where, e.g. .where(…) and may be repeated using method chaining, e.g. .where(…).where(…).</p>
+
+<p>A filter statement may use method call syntax (which allows basic criteria operations, such as equality, regex matching, and ruby === comparison) or block syntax (which allows arbitrary code, e.g. .where {…}).</p>
+
+<p>Filter criteria
+When using a plural resource, a filter criterion is used to select individual test subjects within a filter statement. You may use multiple filter criteria in a single filter statement, .where(color: ‘blue’, size: ‘small’).</p>
+
+<p>When method-call syntax is used with the filter statement, you provide filter criteria as a Hash, with filter criteria names as keys, and conditions as the Hash values. You may provide test, true/false, or numbers, in which case the comparison is equality; or you may provide a regular expression, in which case a match is performed.</p>
+
+<p>Here, (color: blue) is a single filter criterion being used with a filter statement in method-call syntax.</p>
+
+<h1 id="count-only-blue-cars">Count only blue cars</h1>
+<p>describe cars.where(color: ‘blue’) do
+  its(‘count’) { should eq 20 }
+end
+When block-method syntax is used with the filter statement, you provide a block. The block may contain arbitrary code, and each filter criteria will be available as an accessor. The block will be evaluated once per row, and each block that evaluates to a truthy value will pass the filter.</p>
+
+<p>Here, { engine_cylinders &gt;= 6 } is a block-syntax filter statement referring to one filter criterion.</p>
+
+<p>describe cars.where { engine_cylinders &gt;= 6 } do
+  its(‘city_mpg_ratings’) { should_not include ‘4-star’ }
+end
+Examples</p>
+<h1 id="method-form-simple">Method form, simple</h1>
+<h1 id="select-just-the-root-user-direct-equality">Select just the root user (direct equality)</h1>
+<p>describe shadow.where(user: ‘root’) do
+  its (‘count’) { should eq 1 }
+end</p>
+
+<h1 id="method-form-with-a-regex">Method form, with a regex</h1>
+<h1 id="select-all-users-whose-names-begin-with-smb">Select all users whose names begin with smb</h1>
+<p>describe shadow.where(user: /^smb/) do
+  its (‘count’) { should eq 2 }
+end</p>
+
+<h1 id="block-form">Block form</h1>
+<h1 id="select-users-whose-passwords-have-expired">Select users whose passwords have expired</h1>
+<p>describe shadow.where { expiry_date &gt; 0 } do
+  # This test directly asserts that there should be 0 such users
+  its(‘count’) { should eq 0 }
+  # But if the count test fails, this test outputs the users that are causing the failure.
+  its(‘users’) { should be_empty }
+end</p>
+
+<h1 id="--2">—-</h1>
+
+<h1 id="for-improved-readability-put-longer-filter-criteria">For improved readability put longer filter criteria</h1>
+<h1 id="on-separate-lines">on separate lines</h1>
+<p>describe resource(
+  property1_name: ‘my-filter’,
+  property2_name: ‘my-log-group’
+) do
+  it { should exist }
+end</p>
+
+<h1 id="--3">—-</h1>
+
+<h1 id="ensure-everyone-except-admins-has-an-stale-policy-of-no-more-than-14-days">Ensure everyone except admins has an stale policy of no more than 14 days</h1>
+<p>describe shadow.where { user !~ /adm$/ } do
+  its(‘inactive_days.max’) { should be &lt;= 14 }
+end</p>
+
+<h1 id="find-locked-accounts-and-ensure-nobody-is-on-the-list">Find ‘locked’ accounts and ensure ‘nobody’ is on the list</h1>
+<p>describe shadow.where(password: ‘<em>LK</em>’) do
+  its(‘users’) { should include ‘nobody’ }
+end</p>
+
+<h1 id="find-users-who-have-not-changed-their-password-within-90-days">Find users who have not changed their password within 90 days</h1>
+<p>describe shadow.where { last_change &gt; Date.today - 90 - Date.new(1970,1,1) } do
+  its(‘users’) { should be_empty }
+end</p>
+
+<h1 id="find-users-who-have-a-nonzero-wait-time">Find users who have a nonzero wait time</h1>
+<p>describe shadow.where { min_days &gt; 0 } do
+  its(‘users’) { should be_empty }
+end</p>
+
+<h1 id="all-users-should-have-a-30-day-policy">All users should have a 30-day policy</h1>
+<p>describe shadow.where { max_days != 30 } do
+  its(‘users’) { should be_empty }
+end</p>
+
+<h1 id="ensure-everyone-has-a-stale-policy-of-no-more-than-14-days">Ensure everyone has a stale policy of no more than 14 days.</h1>
+<p>describe shadow.where { inactive_days.nil? || inactive_days &gt; 14 } do
+  its(‘users’) { should be_empty }
+end</p>
+
+<h1 id="ensure-no-one-is-disabled-due-to-a-old-password">Ensure no one is disabled due to a old password</h1>
+<p>describe shadow.where { !expiry_date.nil? } do
+  its(‘users’) { should be_empty }
+end</p>
+
+<h1 id="ensure-no-one-is-disabled-for-more-than-14-days">Ensure no one is disabled for more than 14 days</h1>
+<p>describe shadow.where { !expiry_date.nil? &amp;&amp; expiry_date - Date.new(1970,1,1) &gt; 14} do
+  its(‘users’) { should be_empty }
+end</p>
+
+<p>describe auditd.syscall(‘open’) do</p>
+<h1 id="or">or</h1>
+<p>describe auditd.where(syscall: ‘open’) do</p>
+
+<p>describe auditd.syscall(‘chown’).where { arch == “b32” } do</p>
+<h1 id="or-1">or</h1>
+<p>describe auditd.where(syscall: ‘chown’, arch: ‘b32’ ) do
+Common ruby methods
+See Ruby Docs</p>
+
+<p>cmd.stdout.chomp
+Will remove trailing new lines from the string, i.e. it removes carriage return characters (\n, \r, and \r\n).</p>
+
+<p>cmd.exit_status.to_i.nonzero?
+Test if a command was unsuccessful.</p>
+
+<p>array.keep_if
+Deletes every element of self for which the given block evaluates to false.</p>
+
+<p>a = %w{ a b c d e f }
+a.keep_if { |v| v =~ /[aeiou]/ }  # =&gt; [“a”, “e”]
+array.sort
+No explanation necessary.</p>
+
+<p>array.uniq
+Removes duplicate elements from array. Returns nil if no changes are made (that is, no duplicates are found).</p>
+
+<p>a = [ “a”, “a”, “b”, “b”, “c” ]
+a.uniq   # =&gt; [“a”, “b”, “c”]</p>
+
+<p>b = [ “a”, “b”, “c” ]
+b.uniq   # =&gt; nil
+array.flatten
+Recursively turns nested arrays into a one-dimensional flattening of self.</p>
+
+<p>a = [[1, 2, 3], [4, 5, 6, [7, 8]], 9, 10]
+a.flatten  # =&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+string.gsub
+The gsub string method replaces a substring with another string. It finds all instances of the matched string and replaces it with the new argument. The method takes two arguments. The first is the text you want to replace and the second is the new text.</p>
+
+<p>sentence = “Today is Friday”
+sentence.gsub(‘Friday’,’Saturday’)  # =&gt; “Today is Saturday”</p>
+
+<p>sentence = “My favourite number is 3”
+sentence.gsub(/\d+/,”7”) # =&gt; “My favourite number is 7”
+An entire string, as opposed to a substring, may be replaced using the replace method:</p>
+
+<p>sentence = “Today is Friday” 
+sentence.replace(“Tomorrow is Saturday”) # =&gt; “Tomorrow is Saturday”
+string.scan
+Iterate through str, matching the pattern (which may be a Regexp or a String). For each match, a result is generated and either added to the result array. If the pattern contains no groups, each individual result consists of the matched string, $&amp;. If the pattern contains groups, each individual result is itself an array containing one entry per group.</p>
+
+<p>a = “cruel world”
+a.scan(/\w+/)        #=&gt; [“cruel”, “world”]
+a.scan(/…/)        #=&gt; [“cru”, “el “, “wor”]
+a.scan(/(…)/)      #=&gt; [[“cru”], [“el “], [“wor”]]
+a.scan(/(..)(..)/)   #=&gt; [[“cr”, “ue”], [“l “, “wo”]]
+string.split
+Divides str into substrings based on a delimiter, returning an array of these substrings.</p>
+
+<p>If pattern is a String, then its contents are used as the delimiter when splitting str.
+If pattern is a single space, str is split on whitespace, with leading whitespace and runs of contiguous whitespace characters ignored.
+If pattern is a Regexp, str is divided where the pattern matches. Whenever the pattern matches a zero-length string, str is split into individual characters.
+If pattern contains groups, the respective matches will be returned in the array as well.
+If pattern is nil, the value of $; is used. If $; is nil (which is the default), str is split on whitespace as if ‘ ‘ were specified.
+If the limit parameter is omitted, trailing null fields are suppressed. If limit is a positive number, at most that number of split substrings will be returned (captured groups will be returned as well, but are not counted towards the limit). If limit is 1, the entire string is returned as the only entry in an array. If negative, there is no limit to the number of fields returned, and trailing null fields are not suppressed.
+When the input str is empty an empty Array is returned as the string is considered to have no fields to split.
+“ now’s  the time”.split        #=&gt; [“now’s”, “the”, “time”]
+“ now’s  the time”.split(‘ ‘)   #=&gt; [“now’s”, “the”, “time”]
+“ now’s  the time”.split(/ /)   #=&gt; [””, “now’s”, “”, “the”, “time”]
+“1, 2.34,56, 7”.split(%r{,\s<em>}) #=&gt; [“1”, “2.34”, “56”, “7”]
+“hello”.split(//)               #=&gt; [“h”, “e”, “l”, “l”, “o”]
+“hello”.split(//, 3)            #=&gt; [“h”, “e”, “llo”]
+“hi mom”.split(%r{\s</em>})         #=&gt; [“h”, “i”, “m”, “o”, “m”]</p>
+
+<p>“mellow yellow”.split(“ello”)   #=&gt; [“m”, “w y”, “w”]
+“1,2,,3,4,,”.split(‘,’)         #=&gt; [“1”, “2”, “”, “3”, “4”]
+“1,2,,3,4,,”.split(‘,’, 4)      #=&gt; [“1”, “2”, “”, “3,4,,”]
+“1,2,,3,4,,”.split(‘,’, -4)     #=&gt; [“1”, “2”, “”, “3”, “4”, “”, “”]</p>
+
+<p>“1:2:3”.split(/(:)()()/, 2)     #=&gt; [“1”, “:”, “”, “”, “2:3”]</p>
+
+<p>”“.split(‘,’, -1)               #=&gt; []
+string.tr
+tr(from_str, to_str) : Returns a copy of str with the characters in from_str replaced by the corresponding characters in to_str. If to_str is shorter than from_str, it is padded with its last character in order to maintain the correspondence.</p>
+
+<p>“hello”.tr(‘el’, ‘ip’)      #=&gt; “hippo”
+“hello”.tr(‘aeiou’, ‘<em>’)    #=&gt; “h</em>ll<em>”
+“hello”.tr(‘aeiou’, ‘AA</em>’)  #=&gt; “hAll*”
+Both strings may use the c1-c2 notation to denote ranges of characters, and from_strmay start with a ^, which denotes all characters except those listed.</p>
+
+<p>“hello”.tr(‘a-y’, ‘b-z’)    #=&gt; “ifmmp”
+“hello”.tr(‘^aeiou’, ‘<em>’)   #=&gt; “</em>e**o”
+The backslash character &lt;/code&gt; can be used to escape <code>^ or - and is otherwise ignored unless it appears at the end of a range or the end of the from_str orto_str:</code></p>
+
+<p>“hello^world”.tr(“\^aeiou”, “<em>”) #=&gt; “h</em>ll<em>*w</em>rld”
+“hello-world”.tr(“a\-eo”, “<em>”)   #=&gt; “h</em>ll<em>*w</em>rld”</p>
+
+<p>“hello\r\nworld”.tr(“\r”, “”)   #=&gt; “hello\nworld”
+“hello\r\nworld”.tr(“\r”, “”)  #=&gt; “hello\r\nwold”
+“hello\r\nworld”.tr(“\\r”, “”) #=&gt; “hello\nworld”</p>
+
+<p>“X[’\b’]”.tr(“X\”, “”)   #=&gt; “[‘b’]”
+“X[’\b’]”.tr(“X-\]”, “”) #=&gt; “‘b’”
+.to_str / .to_i
+No explanation necessary.</p>
+
+<p>Examples</p>
+<some_resource>.forwarding_rules.flatten.each { |rule|
+    describe rule do
+        its('property1') { should eq "https" }
+        its('property2') { should eq 443 }
+    end
+}
+
+# ----
+
+# 1. build path string
+# 2. use file resource on string
+# 3. access the file resource's "content" property
+# 4. remove commented lines
+# 5. detect all virtualhost stanzas (case [i]nsensitive, [m]ultiline)
+# 6. store nested virtualhosts as new elements in a one-dimensional array
+
+# Regex are created with `/pat/` and `%r{pat}`
+
+# https://github.com/dev-sec/apache-baseline/blob/master/controls/apache_spec.rb
+virtual_host = file(
+    File.join(sites_enabled_path, id)
+  )
+  .content.gsub(/#.*$/, '')
+  .scan(%r{&lt;virtualhost.*443(.*?)&lt;\/virtualhost&gt;}im).flatten
+  
+next if virtual_host.empty?
+Profiles
+Profile Structure
+A profile should have the following structure:
+
+examples/profile
+├── README.md
+├── controls
+│   ├── example.rb
+│   └── control_etc.rb
+├── libraries
+│   └── extension.rb
+|── files
+│   └── extras.conf
+└── inspec.yml
+where:
+
+inspec.yml includes the profile description (required)
+controls is the directory in which all tests are located (required)
+libraries is the directory in which all InSpec resource extensions are located (optional)
+files is the directory with additional files that a profile can access (optional)
+README.md should be used to explain the profile, its scope, and usage
+Create a Profile
+InSpec version: 3.2.6:
+
+$ inspec init help profile
+Usage:
+  inspec init profile [OPTIONS] NAME
+
+Options:
+  p, [--platform=PLATFORM]             # Which platform to generate a platform for: choose from os, aws, gcp
+                                       # Default: os
+      [--overwrite], [--no-overwrite]  # Overwrites existing directory
+      [--log-level=LOG_LEVEL]          # Set the log level: info (default), debug, warn, error
+      [--log-location=LOG_LOCATION]    # Location to send diagnostic log messages to. (default: STDOUT or Inspec::Log.error)
+
+Generate a new profile
+InSpec Shell
+List resources and their respective help:
+
+$ inspec shell
+
+help resources
+help <resource name="">
+Libraries
+mongo example
+Source
+
+resource_mongo_command.rb
+nginx example
+Source
+
+nginx_lib.rb
+Misc. (unsorted/wip)
+  describe file('/proc/sys/kernel/random/entropy_avail').content.to_i do
+    it { should &gt;= 1000 }
+  end
+
+  describe file(json('/etc/docker/daemon.json').params['tlscacert']) do
+    it { should exist }
+    it { should be_file }
+    it { should be_owned_by 'root' }
+    it { should be_grouped_into 'root' }
+  end
+control 'foo-1' do
+  only_if { os.linux? }
+
+  # use custom library to test if a systemd unit for a socket config
+  # exists and return a message if not
+  if docker_helper.socket
+    rule = '-w ' + docker_helper.socket + ' -p rwxa -k docker'
+    describe auditd do
+      its(:lines) { should include(rule) }
+    end
+  else
+    describe 'audit docker service' do
+      skip 'Cannot determine docker socket'
+    end
+  end
+end
+control 'foo-1' do
+  instantiated_images = command('docker ps -qa | xargs docker inspect -f \'\'').stdout.split
+  all_images = command('docker images -q --no-trunc').stdout.split
+  diff = all_images - instantiated_images
+
+  describe diff do
+    it { should be_empty }
+  end
+end
+
+# ----
+
+control 'foo-2' do
+  total_on_host = command('docker info').stdout.split[1].to_i
+  total_running = command('docker ps -q').stdout.split.length
+  diff = total_on_host - total_running
+
+  describe diff do
+    it { should be &lt;= MANAGEABLE_CONTAINER_NUMBER }
+  end
+end
+
+control 'foo-3' do
+  total_tasks = command("ps aux | grep #{apache.service} | grep -v grep | grep root | wc -l | tr -d [:space:]").stdout.to_i
+
+  describe total_tasks do
+    it { should eq 1 }
+  end
+end
+[5000, 35357].each do |port|
+  # TODO: workaround until https://github.com/chef/inspec/issues/1205 is fixed
+  next if os.name.nil? # detect mock backend during inspec check
+  describe ssl(port: port) do
+    it { should be_enabled }
+  end
+end
+Pass options to resource
+options = {
+  enable_remote_worker: true,
+  headers: { 'User-Agent' =&gt; 'Docker' },
+  ssl_verify: false
+}
+
+describe http('https://localhost', options) do
+  its('status') { should cmp 200 }
+end
+</resource></some_resource>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-6 footer">
+                    <p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>
