@@ -21,10 +21,18 @@ entries:
 
   - title: Develop Azure compute solutions (25-30%)
     output: web, pdf
-
     folderitems:
+    
     - title: Implement IaaS solutions
       url: /Implement_IaaS_solutions
+      output: web, pdf
+    
+    - title: Create Azure App Service Web Apps
+      url: /Create_Azure_App_Service_Web_Apps
+      output: web, pdf
+    
+    - title: Implement Azure functions
+      url: /Implement_Azure_functions
       output: web, pdf
   
   - title: Develop for Azure storage (10-15%)
@@ -55,7 +63,7 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Still studying
+    - title: Implement IaaS solutions
       url: /Implement_IaaS_solutions
       output: web, pdf
 

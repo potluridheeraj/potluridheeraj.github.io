@@ -18,24 +18,24 @@ The high-level view of the skills measured in the exam:
 
 ## Develop Azure compute solutions (25-30%)
 ### [Implement IaaS solutions](/Implement_IaaS_solutions)    
-  * provision virtual machines (VMs)  
-  * configure, validate, and deploy ARM templates 
-  * configure container images for solutions    
-  * publish an image to the Azure Container Registry    
-  * run containers by using Azure Container Instance    
+  * Provision virtual machines (VMs)  
+  * Configure, validate, and deploy ARM templates 
+  * Configure container images for solutions    
+  * Publish an image to the Azure Container Registry    
+  * Run containers by using Azure Container Instance    
 
-### Create Azure App Service Web Apps    
-  * create an Azure App Service Web App    
-  * enable diagnostics logging    
-  * deploy code to a web app    
-  * configure web app settings including SSL, API settings, and connection strings    
-  * implement autoscaling rules including scheduled autoscaling and autoscaling by    
-  * operational or system metrics   
+### [Create Azure App Service Web Apps](/Create_Azure_App_Service_Web_Apps)    
+  * Create an Azure App Service Web App    
+  * Enable diagnostics logging    
+  * Deploy code to a web app    
+  * Configure web app settings including SSL, API settings, and connection strings    
+  * Implement autoscaling rules including scheduled autoscaling and autoscaling by    
+  * Operational or system metrics   
 
-### Implement Azure functions    
-  * create and deploy Azure Functions apps    
-  * implement input and output bindings for a function    
-  * implement function triggers by using data operations, timers, and webhooks    
-  * implement Azure Durable Functions    
-  * implement custom handlers    
+### [Implement Azure functions](/Implement_Azure_functions)   
+  * Create and deploy Azure Functions apps    
+  * Implement input and output bindings for a function    
+  * Implement function triggers by using data operations, timers, and webhooks    
+  * Implement Azure Durable Functions    
+  * Implement custom handlers    
 

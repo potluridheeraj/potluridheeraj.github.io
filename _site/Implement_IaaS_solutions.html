@@ -233,6 +233,20 @@
           
           
           
+          
+          
+          <li><a title="Create Azure App Service Web Apps" href="Create_Azure_App_Service_Web_Apps">Create Azure App Service Web Apps</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Implement Azure functions" href="Implement_Azure_functions">Implement Azure functions</a></li>
+          
+          
+          
+          
       </ul>
    </li>
      
@@ -292,7 +306,7 @@
           
           
           
-          <li class="active"><a title="Still studying" href="Implement_IaaS_solutions">Still studying</a></li>
+          <li class="active"><a title="Implement IaaS solutions" href="Implement_IaaS_solutions">Implement IaaS solutions</a></li>
           
           
           
@@ -357,6 +371,14 @@ $('#toc').on('click', 'a', function() {
     
 
    <h2 id="implement-iaas-solutions">Implement IaaS solutions</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* provision virtual machines (VMs)  
+* configure, validate, and deploy ARM templates 
+* configure container images for solutions    
+* publish an image to the Azure Container Registry    
+* run containers by using Azure Container Instance
+</code></pre></div></div>
+
 <h3 id="provision-vms">Provision VMs</h3>
 
 <p>Quickstart: Create a Windows virtual machine in the Azure portal<br />
@@ -367,7 +389,12 @@ $('#toc').on('click', 'a', function() {
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A resource group must be created before a virtual machine</div>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzResourceGroup</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w">
+<h4 id="create-resource-group">Create resource group</h4>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">windows:</span><span class="w">
+</span><span class="nf">New-AzResourceGroup</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w">
+
+</span><span class="nf">azure</span><span class="w"> </span><span class="nx">CLI</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">Linux:</span><span class="w">
+</span><span class="nf">az</span><span class="w"> </span><span class="nx">group</span><span class="w"> </span><span class="nx">create</span><span class="w">  </span><span class="nt">--name</span><span class="w"> </span><span class="nx">myResourceGroup</span><span class="w"> </span><span class="nt">--location</span><span class="w"> </span><span class="s2">"Central US"</span><span class="w">
 </span></code></pre></div></div>
 
 <h4 id="create-the-vm">Create the VM.</h4>
@@ -454,22 +481,79 @@ Within your template, you can write template expressions that extend the capabil
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/resource-declaration"><strong>Resources</strong></a> - Specify the resources to deploy.</p>
 
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/outputs?tabs=azure-powershell"><strong>Outputs</strong></a> - Return values from the deployed resources.</p>
+<h4 id="deploy-template">Deploy template</h4>
 
-<p><strong>Example JSON</strong></p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"resources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Microsoft.Storage/storageAccounts"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"apiVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-01"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mystorageaccount"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"westus"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard_LRS"</span><span class="w">
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$templateFile</span> <span class="o">=</span> <span class="s2">"{provide-the-path-to-the-template-file}"</span>
+New-AzResourceGroupDeployment <span class="sb">`</span>
+  <span class="nt">-Name</span> blanktemplate <span class="sb">`</span>
+  <span class="nt">-ResourceGroupName</span> myResourceGroup <span class="sb">`</span>
+  <span class="nt">-TemplateFile</span> <span class="nv">$templateFile</span>
+
+linux:
+<span class="nv">templateFile</span><span class="o">=</span><span class="s2">"{provide-the-path-to-the-template-file}"</span>
+az deployment group create <span class="se">\</span>
+  <span class="nt">--name</span> blanktemplate <span class="se">\</span>
+  <span class="nt">--resource-group</span> myResourceGroup <span class="se">\</span>
+  <span class="nt">--template-file</span> <span class="nv">$templateFile</span>
+</code></pre></div></div>
+
+<h4 id="template-example">Template Example</h4>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contentVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"storagePrefix"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"minLength"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"maxLength"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"StorageV2"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+    </span><span class="nl">"storageSKU"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"defaultValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard_LRS"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"allowedValues"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"Standard_LRS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Standard_GRS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Standard_RAGRS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Standard_ZRS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Premium_LRS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Premium_ZRS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Standard_GZRS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Standard_RAGZRS"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"defaultValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[resourceGroup().location]"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"variables"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"uniqueStorageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[concat(parameters('storagePrefix'), uniqueString(resourceGroup().id))]"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"resources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Microsoft.Storage/storageAccounts"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"apiVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-01"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[variables('uniqueStorageName')]"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[parameters('location')]"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sku"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[parameters('storageSKU')]"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"StorageV2"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"supportsHttpsTrafficOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"outputs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"storageEndpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[reference(variables('uniqueStorageName')).primaryEndpoints]"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
+
+<h3 id="container-images">Container images</h3>
 
 
     <div class="tags">

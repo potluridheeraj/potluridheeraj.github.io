@@ -6,6 +6,13 @@ folder: microsoft
 sidebar: az-204_sidebar
 ---
 ## Implement IaaS solutions
+
+    * provision virtual machines (VMs)  
+    * configure, validate, and deploy ARM templates 
+    * configure container images for solutions    
+    * publish an image to the Azure Container Registry    
+    * run containers by using Azure Container Instance
+    
 ### Provision VMs
 
 Quickstart: Create a Windows virtual machine in the Azure portal  
@@ -17,8 +24,13 @@ How to connect and sign on to an Azure virtual machine running Windows
 
 {% include note.html content="A resource group must be created before a virtual machine" %}
 
+#### Create resource group
 ```powershell
+windows:
 New-AzResourceGroup -ResourceGroupName "myResourceGroupVM" -Location "EastUS"
+
+azure CLI or Linux:
+az group create  --name myResourceGroup --location "Central US"
 ```
 
 #### Create the VM.    
@@ -112,21 +124,78 @@ The template has the following sections:
 [**Resources**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/resource-declaration) - Specify the resources to deploy.  
 
 [**Outputs**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/outputs?tabs=azure-powershell) - Return values from the deployed resources.  
+#### Deploy template
 
+```shell
+$templateFile = "{provide-the-path-to-the-template-file}"
+New-AzResourceGroupDeployment `
+  -Name blanktemplate `
+  -ResourceGroupName myResourceGroup `
+  -TemplateFile $templateFile
 
-**Example JSON**
-```json
-"resources": [
-  {
-    "type": "Microsoft.Storage/storageAccounts",
-    "apiVersion": "2019-04-01",
-    "name": "mystorageaccount",
-    "location": "westus",
-    "sku": {
-      "name": "Standard_LRS"
-    },
-    "kind": "StorageV2",
-    "properties": {}
-  }
-]
+linux:
+templateFile="{provide-the-path-to-the-template-file}"
+az deployment group create \
+  --name blanktemplate \
+  --resource-group myResourceGroup \
+  --template-file $templateFile
 ```
+
+#### Template Example
+```json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storagePrefix": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 11
+    },
+    "storageSKU": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Standard_GRS",
+        "Standard_RAGRS",
+        "Standard_ZRS",
+        "Premium_LRS",
+        "Premium_ZRS",
+        "Standard_GZRS",
+        "Standard_RAGZRS"
+      ]
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]"
+    }
+  },
+  "variables": {
+    "uniqueStorageName": "[concat(parameters('storagePrefix'), uniqueString(resourceGroup().id))]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-04-01",
+      "name": "[variables('uniqueStorageName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "[parameters('storageSKU')]"
+      },
+      "kind": "StorageV2",
+      "properties": {
+        "supportsHttpsTrafficOnly": true
+      }
+    }
+  ],
+  "outputs": {
+    "storageEndpoint": {
+      "type": "object",
+      "value": "[reference(variables('uniqueStorageName')).primaryEndpoints]"
+    }
+  }
+}
+```
+
+### Container images
