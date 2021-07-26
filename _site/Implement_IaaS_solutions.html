@@ -370,16 +370,16 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <h2 id="implement-iaas-solutions">Implement IaaS solutions</h2>
+   <h1 id="implement-iaas-solutions">Implement IaaS solutions</h1>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* provision virtual machines (VMs)  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* provision virtual machines (VMs)  
 * configure, validate, and deploy ARM templates 
 * configure container images for solutions    
 * publish an image to the Azure Container Registry    
 * run containers by using Azure Container Instance
 </code></pre></div></div>
 
-<h3 id="provision-vms">Provision VMs</h3>
+<h2 id="provision-vms">Provision VMs</h2>
 
 <p>Quickstart: Create a Windows virtual machine in the Azure portal<br />
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-vm?WT.mc_id=thomasmaurer-blog-thmaure">Tutorial: Create and Manage Windows VMs with Azure PowerShell</a></p>
@@ -389,26 +389,26 @@ $('#toc').on('click', 'a', function() {
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A resource group must be created before a virtual machine</div>
 
-<h4 id="create-resource-group">Create resource group</h4>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">windows:</span><span class="w">
-</span><span class="nf">New-AzResourceGroup</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w">
+<h3 id="create-resource-group">Create resource group</h3>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">windows:</span><span class="w">
+</span><span class="nx">New-AzResourceGroup</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w">
 
-</span><span class="nf">azure</span><span class="w"> </span><span class="nx">CLI</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">Linux:</span><span class="w">
-</span><span class="nf">az</span><span class="w"> </span><span class="nx">group</span><span class="w"> </span><span class="nx">create</span><span class="w">  </span><span class="nt">--name</span><span class="w"> </span><span class="nx">myResourceGroup</span><span class="w"> </span><span class="nt">--location</span><span class="w"> </span><span class="s2">"Central US"</span><span class="w">
+</span><span class="n">azure</span><span class="w"> </span><span class="nx">CLI</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">Linux:</span><span class="w">
+</span><span class="n">az</span><span class="w"> </span><span class="nx">group</span><span class="w"> </span><span class="nx">create</span><span class="w">  </span><span class="nt">--name</span><span class="w"> </span><span class="nx">myResourceGroup</span><span class="w"> </span><span class="nt">--location</span><span class="w"> </span><span class="s2">"Central US"</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="create-the-vm">Create the VM.</h4>
+<h3 id="create-the-vm">Create the VM.</h3>
 
 <p>(Windows)</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">New-AzVm</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-VirtualNetworkName</span><span class="w"> </span><span class="s2">"myVnet"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-SubnetName</span><span class="w"> </span><span class="s2">"mySubnet"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-SecurityGroupName</span><span class="w"> </span><span class="s2">"myNetworkSecurityGroup"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-PublicIpAddressName</span><span class="w"> </span><span class="s2">"myPublicIpAddress"</span><span class="w"> </span><span class="err">`</span><span class="w">
-    </span><span class="nt">-Credential</span><span class="w"> </span><span class="nv">$cred</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">New-AzVm</span><span class="w"> </span><span class="se">`
+</span><span class="w">    </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="se">`
+</span><span class="w">    </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w"> </span><span class="se">`
+</span><span class="w">    </span><span class="nt">-Location</span><span class="w"> </span><span class="s2">"EastUS"</span><span class="w"> </span><span class="se">`
+</span><span class="w">    </span><span class="nt">-VirtualNetworkName</span><span class="w"> </span><span class="s2">"myVnet"</span><span class="w"> </span><span class="se">`
+</span><span class="w">    </span><span class="nt">-SubnetName</span><span class="w"> </span><span class="s2">"mySubnet"</span><span class="w"> </span><span class="se">`
+</span><span class="w">    </span><span class="nt">-SecurityGroupName</span><span class="w"> </span><span class="s2">"myNetworkSecurityGroup"</span><span class="w"> </span><span class="se">`
+</span><span class="w">    </span><span class="nt">-PublicIpAddressName</span><span class="w"> </span><span class="s2">"myPublicIpAddress"</span><span class="w"> </span><span class="se">`
+</span><span class="w">    </span><span class="nt">-Credential</span><span class="w"> </span><span class="nv">$cred</span><span class="w">
 </span></code></pre></div></div>
 <p>(Linux)</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az vm create <span class="se">\</span>
@@ -420,50 +420,50 @@ $('#toc').on('click', 'a', function() {
 </code></pre></div></div>
 
 <p>Return the public IP address of the VM</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzPublicIpAddress</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="nf">Select</span><span class="w"> </span><span class="nx">IpAddress</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-AzPublicIpAddress</span><span class="w"> </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="n">Select</span><span class="w"> </span><span class="nx">IpAddress</span><span class="w">
 </span></code></pre></div></div>
 
 <p><strong>Get-AzVMImagePublisher</strong> command to return a list of image publishers.  <br />
 <strong>Get-AzVMImageOffer</strong> to return a list of image offers.</p>
 
 <p>If you are using PowerShell and have the Azure PowerShell module installed you may also connect using the Get-AzRemoteDesktopFile cmdlet, as shown below.</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzRemoteDesktopFile</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"RgName"</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"VmName"</span><span class="w"> </span><span class="nt">-Launch</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-AzRemoteDesktopFile</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"RgName"</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"VmName"</span><span class="w"> </span><span class="nt">-Launch</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="resize-a-vm">Resize a VM</h4>
+<h3 id="resize-a-vm">Resize a VM</h3>
 
 <p>Before resizing a VM, check if the size you want is available on the current VM cluster. The Get-AzVMSize command returns a list of sizes.</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-AzVMSize</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-AzVMSize</span><span class="w"> </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w">
 </span></code></pre></div></div>
 
 <p>If the size is available, the VM can be resized from a powered-on state, however it is rebooted during the operation.</p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$vm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Get-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-VMName</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$vm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-AzVM</span><span class="w"> </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-VMName</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w">
 </span><span class="nv">$vm</span><span class="o">.</span><span class="nf">HardwareProfile</span><span class="o">.</span><span class="nf">VmSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Standard_DS3_v2"</span><span class="w">
-</span><span class="nf">Update-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-VM</span><span class="w"> </span><span class="nv">$vm</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">
+</span><span class="n">Update-AzVM</span><span class="w"> </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-VM</span><span class="w"> </span><span class="nv">$vm</span><span class="w"> </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">
 </span></code></pre></div></div>
 
 <div class="bs-callout bs-callout-primary">If the size you want isn’t available on the current cluster, the VM needs to be deallocated before the resize operation can occur. Deallocating a VM will remove any data on the temp disk, and the public IP address will change unless a static IP address is being used. </div>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Stop-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w"> </span><span class="nt">-Force</span><span class="w">
-</span><span class="nv">$vm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Get-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-VMName</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Stop-AzVM</span><span class="w"> </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w"> </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w"> </span><span class="nt">-Force</span><span class="w">
+</span><span class="nv">$vm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-AzVM</span><span class="w"> </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-VMName</span><span class="w"> </span><span class="s2">"myVM"</span><span class="w">
 </span><span class="nv">$vm</span><span class="o">.</span><span class="nf">HardwareProfile</span><span class="o">.</span><span class="nf">VmSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Standard_E2s_v3"</span><span class="w">
-</span><span class="nf">Update-AzVM</span><span class="w"> </span><span class="nt">-VM</span><span class="w"> </span><span class="nv">$vm</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">
-</span><span class="nf">Start-AzVM</span><span class="w"> </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="err">`</span><span class="w">
-   </span><span class="nt">-Name</span><span class="w"> </span><span class="nv">$vm</span><span class="o">.</span><span class="nf">name</span><span class="w">
+</span><span class="n">Update-AzVM</span><span class="w"> </span><span class="nt">-VM</span><span class="w"> </span><span class="nv">$vm</span><span class="w"> </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">
+</span><span class="n">Start-AzVM</span><span class="w"> </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-ResourceGroupName</span><span class="w"> </span><span class="s2">"myResourceGroupVM"</span><span class="w">  </span><span class="se">`
+</span><span class="w">   </span><span class="nt">-Name</span><span class="w"> </span><span class="nv">$vm</span><span class="o">.</span><span class="nf">name</span><span class="w">
 </span></code></pre></div></div>
-<h3 id="arm-templates">ARM Templates</h3>
+<h2 id="arm-templates">ARM Templates</h2>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> ARM Templates is used to create a template which can be used to create apps, VM’s or almost anything in Azure </div>
 
@@ -481,7 +481,7 @@ Within your template, you can write template expressions that extend the capabil
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/resource-declaration"><strong>Resources</strong></a> - Specify the resources to deploy.</p>
 
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/outputs?tabs=azure-powershell"><strong>Outputs</strong></a> - Return values from the deployed resources.</p>
-<h4 id="deploy-template">Deploy template</h4>
+<h3 id="deploy-template">Deploy template</h3>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$templateFile</span> <span class="o">=</span> <span class="s2">"{provide-the-path-to-the-template-file}"</span>
 New-AzResourceGroupDeployment <span class="sb">`</span>
@@ -497,7 +497,7 @@ az deployment group create <span class="se">\</span>
   <span class="nt">--template-file</span> <span class="nv">$templateFile</span>
 </code></pre></div></div>
 
-<h4 id="template-example">Template Example</h4>
+<h3 id="template-example">Template Example</h3>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"contentVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0.0"</span><span class="p">,</span><span class="w">
@@ -553,7 +553,114 @@ az deployment group create <span class="se">\</span>
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h3 id="container-images">Container images</h3>
+<h2 id="acr-container-images">ACR Container images</h2>
+
+<p>configure container images for solutions</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">RES_GROUP</span><span class="o">=</span><span class="nv">$ACR_NAME</span> <span class="c"># Resource Group name</span>
+
+az group create <span class="nt">--resource-group</span> <span class="nv">$RES_GROUP</span> <span class="nt">--location</span> eastus
+az acr create <span class="nt">--resource-group</span> <span class="nv">$RES_GROUP</span> <span class="nt">--name</span> <span class="nv">$ACR_NAME</span> <span class="nt">--sku</span> Standard <span class="nt">--location</span> eastus
+
+az acr build <span class="nt">--registry</span> <span class="nv">$ACR_NAME</span> <span class="nt">--image</span> helloacrtasks:v1 <span class="nb">.</span>
+</code></pre></div></div>
+<p><strong>az keyvault secret set</strong></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create service principal, store its password in AKV (the registry *password*)</span>
+az keyvault secret <span class="nb">set</span> <span class="se">\</span>
+  <span class="nt">--vault-name</span> <span class="nv">$AKV_NAME</span> <span class="se">\</span>
+  <span class="nt">--name</span> <span class="nv">$ACR_NAME</span><span class="nt">-pull-pwd</span> <span class="se">\</span>
+  <span class="nt">--value</span> <span class="si">$(</span>az ad sp create-for-rbac <span class="se">\</span>
+                <span class="nt">--name</span> <span class="nv">$ACR_NAME</span><span class="nt">-pull</span> <span class="se">\</span>
+                <span class="nt">--scopes</span> <span class="si">$(</span>az acr show <span class="nt">--name</span> <span class="nv">$ACR_NAME</span> <span class="nt">--query</span> <span class="nb">id</span> <span class="nt">--output</span> tsv<span class="si">)</span> <span class="se">\</span>
+                <span class="nt">--role</span> acrpull <span class="se">\</span>
+                <span class="nt">--query</span> password <span class="se">\</span>
+                <span class="nt">--output</span> tsv<span class="si">)</span>
+
+
+<span class="c"># Store service principal ID in AKV (the registry *username*)</span>
+az keyvault secret <span class="nb">set</span> <span class="se">\</span>
+    <span class="nt">--vault-name</span> <span class="nv">$AKV_NAME</span> <span class="se">\</span>
+    <span class="nt">--name</span> <span class="nv">$ACR_NAME</span><span class="nt">-pull-usr</span> <span class="se">\</span>
+    <span class="nt">--value</span> <span class="si">$(</span>az ad sp list <span class="nt">--display-name</span> <span class="nv">$ACR_NAME</span><span class="nt">-pull</span> <span class="nt">--query</span> <span class="o">[]</span>.appId <span class="nt">--output</span> tsv<span class="si">)</span>
+</code></pre></div></div>
+
+<p><strong>$ACR_NAME-pull-usr</strong>: The service principal ID, for use as the container registry username. <br />
+<strong>$ACR_NAME-pull-pwd</strong>: The service principal password, for use as the container registry password.</p>
+
+<h3 id="deploy-a-container-with-azure-cli">Deploy a container with Azure CLI</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az container create <span class="se">\</span>
+    <span class="nt">--resource-group</span> <span class="nv">$RES_GROUP</span> <span class="se">\</span>
+    <span class="nt">--name</span> acr-tasks <span class="se">\</span>
+    <span class="nt">--image</span> <span class="nv">$ACR_NAME</span>.azurecr.io/helloacrtasks:v1 <span class="se">\</span>
+    <span class="nt">--registry-login-server</span> <span class="nv">$ACR_NAME</span>.azurecr.io <span class="se">\</span>
+    <span class="nt">--registry-username</span> <span class="si">$(</span>az keyvault secret show <span class="nt">--vault-name</span> <span class="nv">$AKV_NAME</span> <span class="nt">--name</span> <span class="nv">$ACR_NAME</span><span class="nt">-pull-usr</span> <span class="nt">--query</span> value <span class="nt">-o</span> tsv<span class="si">)</span> <span class="se">\</span>
+    <span class="nt">--registry-password</span> <span class="si">$(</span>az keyvault secret show <span class="nt">--vault-name</span> <span class="nv">$AKV_NAME</span> <span class="nt">--name</span> <span class="nv">$ACR_NAME</span><span class="nt">-pull-pwd</span> <span class="nt">--query</span> value <span class="nt">-o</span> tsv<span class="si">)</span> <span class="se">\</span>
+    <span class="nt">--dns-name-label</span> acr-tasks-<span class="nv">$ACR_NAME</span> <span class="se">\</span>
+    <span class="nt">--query</span> <span class="s2">"{FQDN:ipAddress.fqdn}"</span> <span class="se">\</span>
+    <span class="nt">--output</span> table
+
+
+<span class="c"># Get the IP address of the Azure container instance running the following command</span>
+az container show <span class="nt">--resource-group</span>  learn-deploy-acr-rg <span class="nt">--name</span> acr-tasks <span class="nt">--query</span> ipAddress.ip <span class="nt">--output</span> table
+</code></pre></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># To check your container's status</span>
+az container show <span class="se">\</span>
+  <span class="nt">--resource-group</span> learn-deploy-aci-rg <span class="se">\</span>
+  <span class="nt">--name</span> mycontainer-restart-demo <span class="se">\</span>
+  <span class="nt">--query</span> containers[0].instanceView.currentState.state
+
+<span class="c"># View the container's logs to examine the output</span>
+az container logs <span class="se">\</span>
+  <span class="nt">--resource-group</span> learn-deploy-aci-rg <span class="se">\</span>
+  <span class="nt">--name</span> mycontainer-restart-demo
+</code></pre></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#az acr login command to complete the operation</span>
+az acr login <span class="nt">--name</span> &lt;acrName&gt;
+
+<span class="c">#To get the loginServer name, run the following command:</span>
+az acr show <span class="nt">--name</span> &lt;acrName&gt; <span class="nt">--query</span> loginServer <span class="nt">--output</span> table
+
+<span class="c">#Result</span>
+<span class="c">#------------------</span>
+<span class="c">#&lt;acrName&gt;.azurecr.io</span>
+
+<span class="c">#Now, tag the azure-vote-front image with the loginServer of your container registry. Also, add :v1 to the end of the image name. This tag indicates the image version.</span>
+docker tag azure-vote-front &lt;acrName&gt;.azurecr.io/azure-vote-front:v1
+
+<span class="c">#Push the azure-vote-front image to the registry</span>
+docker push &lt;acrName&gt;.azurecr.io/azure-vote-front:v1
+
+<span class="c">#To return a list of images that have been pushed to your Azure Container registry</span>
+az acr repository list <span class="nt">--name</span> &lt;acrName&gt; <span class="nt">--output</span> table
+</code></pre></div></div>
+
+<p>Replicate a container image to different Azure regions</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az acr replication create <span class="nt">--registry</span> <span class="nv">$ACR_NAME</span> <span class="nt">--location</span> japaneast
+
+<span class="c">#retrieve all container image replicas created by running</span>
+az acr replication list <span class="nt">--registry</span> <span class="nv">$ACR_NAME</span> <span class="nt">--output</span> table
+</code></pre></div></div>
+
+<h2 id="azure-container-instance">Azure Container Instance</h2>
+
+<p>start a container instance</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az container create <span class="nt">--resource-group</span> myResourceGroup <span class="nt">--name</span> mycontainer <span class="nt">--image</span> mcr.microsoft.com/azuredocs/aci-helloworld <span class="nt">--dns-name-label</span> aci-demo <span class="nt">--ports</span> 80
+
+az container show <span class="nt">--resource-group</span> myResourceGroup <span class="nt">--name</span> mycontainer <span class="nt">--query</span> <span class="s2">"{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}"</span> <span class="nt">--out</span> table
+
+<span class="c">#Output:</span>
+<span class="c">#FQDN                               ProvisioningState</span>
+<span class="c">#---------------------------------  -------------------</span>
+<span class="c">#aci-demo.eastus.azurecontainer.io  Succeeded</span>
+
+<span class="c">#Pull the container instance logs</span>
+az container logs <span class="nt">--resource-group</span> myResourceGroup <span class="nt">--name</span> mycontainer
+
+<span class="c">#In addition to viewing the logs, you can attach your local standard out and standard error streams to that of the container.</span>
+az container attach <span class="nt">--resource-group</span> myResourceGroup <span class="nt">--name</span> mycontainer
+</code></pre></div></div>
 
 
     <div class="tags">

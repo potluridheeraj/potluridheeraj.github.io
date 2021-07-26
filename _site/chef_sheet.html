@@ -457,7 +457,7 @@ $('#toc').on('click', 'a', function() {
 
 <h2 id="inheritance">Inheritance</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Invoke chef shell in attribute mode
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Invoke chef shell in attribute mode
 chef-shell -z
 chef &gt; attributes
 chef:attributes &gt;
@@ -473,7 +473,7 @@ chef:attributes &gt; node["packages"]
 
 <p>using a Script resource.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash "some_commands" do
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash "some_commands" do
     user "root"
     cwd "/tmp"
     code &lt;&lt;-EOT
@@ -492,7 +492,7 @@ cookbook</a></li>
     <p>Chef Enterprise - Push Jobs (using the <a href="https://github.com/opscode-cookbooks/push-jobs">Push
 Cookbook</a>)</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>knife job start ...
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>knife job start ...
 knife job list
 knife node status ...
 </code></pre></div>    </div>

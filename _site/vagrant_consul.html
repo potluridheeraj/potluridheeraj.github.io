@@ -346,14 +346,14 @@ $('#toc').on('click', 'a', function() {
     
 
    <h2 id="setting-up-vagrant">Setting up vagrant</h2>
-<p>This demo provides a very simple <code class="highlighter-rouge">Vagrantfile</code> that creates Consul server nodes</p>
+<p>This demo provides a very simple <code class="language-plaintext highlighter-rouge">Vagrantfile</code> that creates Consul server nodes</p>
 
 <blockquote>
   <p>To install vagrant please go to <a href="https://www.vagrantup.com/downloads.html">Vagrant</a></p>
 </blockquote>
 <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> To follow through the whole demo you can you use below vagrant file</div>
 
-<p>Below <code class="highlighter-rouge">Vagrantfile</code> creates:</p>
+<p>Below <code class="language-plaintext highlighter-rouge">Vagrantfile</code> creates:</p>
 
 <p>1 consul server<br />
 1 lb server<br />
@@ -393,13 +393,13 @@ end
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant up
 </code></pre></div></div>
 
-<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> If you prefer a different Vagrant box, you can set the <code class="highlighter-rouge">config.vm.box</code> </div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> If you prefer a different Vagrant box, you can set the <code class="language-plaintext highlighter-rouge">config.vm.box</code> </div>
 
 <p>Once it is finished, you should be able to see the following:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant status <span class="c"># will show status of each server </span>
 </code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Current machine states:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Current machine states:
 consul-server                         running (virtualbox)
 lb                                    running (virtualbox)
 web 1 through 4                       running (virtualbox)     

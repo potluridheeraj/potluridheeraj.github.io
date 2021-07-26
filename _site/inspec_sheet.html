@@ -562,9 +562,9 @@ Default value</p>
 shadow_group = ‘shadow’ if os.debian? || os.suse?</p>
 
 <h1 id="single-lines-can-be-broken-up-with-a-trailing-backslash">Single lines can be broken up with a trailing backslash</h1>
-<p>audit_pkg = os.redhat? \
-         || os.suse? \
-         || os.name == ‘amazon’ \
+<p>audit_pkg = os.redhat? <br />
+         || os.suse? <br />
+         || os.name == ‘amazon’ <br />
          || os.name == ‘fedora’ ? ‘audit’ : ‘auditd’</p>
 
 <h1 id="in-a-control">In a control</h1>
