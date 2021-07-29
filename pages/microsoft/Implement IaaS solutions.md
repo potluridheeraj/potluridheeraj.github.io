@@ -311,5 +311,5 @@ az container show --resource-group myResourceGroup --name mycontainer --query "{
 az container logs --resource-group myResourceGroup --name mycontainer
 
 #In addition to viewing the logs, you can attach your local standard out and standard error streams to that of the container.
-az container attach --resource-group myResourceGroup --name mycontainer
+az container attach --resource-group myResourceGroup --name mycontainer 
 ```

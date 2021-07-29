@@ -370,13 +370,59 @@ $('#toc').on('click', 'a', function() {
 
     
 
-   <h2 id="create-azure-app-service-web-apps">Create Azure App Service Web Apps</h2>
+   <h1 id="create-azure-app-service-web-apps">Create Azure App Service Web Apps</h1>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      * create an Azure App Service Web App    
       * enable diagnostics logging    
       * deploy code to a web app    
       * configure web app settings including SSL, API settings, and connection strings    
       * implement autoscaling rules including scheduled autoscaling and autoscaling by    
       * operational or system metrics   
+</code></pre></div></div>
+
+<h2 id="web-app">Web app</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>To deploy the web app
+az appservice plan create <span class="nt">--name</span> <span class="nv">$appPlan</span> <span class="nt">--resource-group</span> <span class="nv">$resourceGroup</span> <span class="nt">--location</span> <span class="nv">$appLocation</span> <span class="nt">--sku</span> FREE
+az webapp create <span class="nt">--name</span> <span class="nv">$appName</span> <span class="nt">--resource-group</span> <span class="nv">$resourceGroup</span> <span class="nt">--plan</span> <span class="nv">$appPlan</span> <span class="nt">--deployment-source-url</span> <span class="nv">$gitRepo</span>
+
+<span class="c">#To create a storage account</span>
+az storage account create <span class="nt">-n</span> <span class="nv">$storageAccount</span> <span class="nt">-g</span> <span class="nv">$resourceGroup</span> <span class="nt">-l</span> <span class="nv">$appLocation</span> <span class="nt">--sku</span> Standard_LRS
+</code></pre></div></div>
+<h2 id="enable-logging-using-the-azure-cli">Enable logging using the Azure CLI</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#To enable app logging to the file system</span>
+az webapp log config <span class="nt">--application-logging</span> <span class="nb">true</span> <span class="nt">--level</span> verbose <span class="nt">--name</span> &lt;app-name&gt; <span class="nt">--resource-group</span> &lt;resource-group-name&gt;
+
+<span class="c">#To view the current logging status for an app</span>
+az webapp log show <span class="nt">--name</span> &lt;app-name&gt; <span class="nt">--resource-group</span> &lt;resource-group-name&gt;
+</code></pre></div></div>
+
+<p><strong>Windows app log files</strong> <br />
+For Windows apps, file system log files are stored in a virtual drive that is associated with your Web App. This drive is addressable as D:\Home, and includes a LogFiles folder; within this folder are one or more subfolders:</p>
+
+<p>Application - Contains application-generated messages, if File System application logging has been enabled. <br />
+DetailedErrors - Contains detailed Web server error logs, if Detailed error messages have been enabled. <br />
+http - Contains IIS-level logs, if Web server logging has been enabled. <br />
+W3SVC<number> - Contains details of all failed http requests, if Failed request tracing has been enabled.</number></p>
+
+<p><strong>Linux app log files</strong>
+For Linux Web Apps, the Azure tools currently support fewer logging options than for Windows apps. Redirections to STDERR and STDOUT are managed through the underlying Docker container that runs the app, and these messages are stored in Docker log files. To see messages logged by underlying processes, such as Apache, you will need to open an SSH connection to the Docker container.</p>
+
+<h2 id="configure-web-app-settings-including-ssl-api-and-connection-strings">configure web app settings including SSL, API, and connection strings</h2>
+<p>Custom configuration and application settings in Azure Web Sites<br />
+  Configure an App Service app in the Azure portal<br />
+  Buy a custom domain name for Azure App Service<br />
+  Add a TLS/SSL certificate in Azure App Service</p>
+
+<h3 id="automate-app-settings-with-the-azure-cli">Automate app settings with the Azure CLI</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Assign a value to a setting with az webapp config app settings set:</span>
+az webapp config appsettings <span class="nb">set</span> <span class="nt">--name</span> &lt;app-name&gt; <span class="nt">--resource-group</span> &lt;resource-group-name&gt; <span class="nt">--settings</span> &lt;setting-name&gt;<span class="o">=</span><span class="s2">"&lt;value&gt;"</span>
+
+<span class="c">#Show all settings and their values with az webapp config appsettings list:</span>
+az webapp config appsettings list <span class="nt">--name</span> &lt;app-name&gt; <span class="nt">--resource-group</span> &lt;resource-group-name&gt;
+
+<span class="c">#Remove one or more settings with az webapp config app settings delete:</span>
+az webapp config appsettings delete <span class="nt">--name</span> &lt;app-name&gt; <span class="nt">--resource-group</span> &lt;resource-group-name&gt; <span class="nt">--setting-names</span> <span class="o">{</span>&lt;names&gt;<span class="o">}</span>
 </code></pre></div></div>
 
 
