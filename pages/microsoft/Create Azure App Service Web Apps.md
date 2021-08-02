@@ -65,3 +65,4 @@ az webapp config appsettings list --name <app-name> --resource-group <resource-g
 #Remove one or more settings with az webapp config app settings delete:
 az webapp config appsettings delete --name <app-name> --resource-group <resource-group-name> --setting-names {<names>}
 ```
+
