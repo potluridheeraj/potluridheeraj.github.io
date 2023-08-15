@@ -8,7 +8,8 @@ folder: about
 ---
 # DHEERAJ POTLURI
 
-Willingness to learn, comprehensive problem solving skills, strong leadership abilities and hard worker.
+Over 8 years of experience in a range of roles, including DevOps, Cloud Engineer, Build and Release Engineer, with excellent skills in Software Integration, Configuration, Packaging, Building, Automating, Managing, and Releasing Code from One Environment to Another and Deploy to Servers, Support, and Maintenance under Unix/Linux Platforms.![image](https://github.com/potluridheeraj/potluridheeraj.github.io/assets/15670524/835c7147-6c68-4a95-8c82-fe3a17058978)
+
 
 
 ## EDUCATION
