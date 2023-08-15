@@ -19,7 +19,7 @@ Over 8 years of experience in a range of roles, including DevOps, Cloud Engineer
    * Microsoft Azure Fundaments
    * Certified Ethical Hacker
 
-Professional Summary:
+## Professional Summary:
 Over 8 years of experience in a range of roles, including DevOps, Cloud Engineer, Build and Release Engineer, with excellent skills in Software Integration, Configuration, Packaging, Building, Automating, Managing, and Releasing Code from One Environment to Another and Deploy to Servers, Support, and Maintenance under Unix/Linux Platforms.
 ❖	Proficient in Microsoft Azure IaaS, encompassing skills in managing Virtual Networks, Virtual Machines, Cloud Services, Resource Groups, Express Route, VPN, Load Balancing, Application Gateways, Auto-Scaling, and Traffic Manager.
 ❖	Skilled in establishing CI/CD pipelines utilizing Git/SVN, Jenkins, Maven, NEXUS, and Docker on AWS RedHat Enterprise AMI, while also adept at automating deployment pipelines.
@@ -55,7 +55,7 @@ Over 8 years of experience in a range of roles, including DevOps, Cloud Engineer
 
 SAP SuccessFactors, Inc. 							Duration: April 2016 - Current
 
-Role: Lead Cloud Automation Engineer						      May 2021 - Current
+### Lead Cloud Automation Engineer						      May 2021 - Current
 
 Description: The aim of this project was to collaborate with the IT team to streamline the company's DevOps tools, which were previously scattered across multiple service providers, onto a single platform using Cloud (Azure, GCP, AWS, Converge Cloud), VPCs, virtual machines. The migration process was facilitated using Terraform and Ansible. The result was a newly implemented DevOps pipeline on the Cloud.
 Responsibilities:
@@ -89,7 +89,7 @@ Responsibilities:
 Environment: Microsoft Azure, AWS, GCP, CI/CD (Jenkins, GitHub Actions, Docker, Kubernetes), Terraform, Configuration Management (Chef, Puppet, Ansible), Linux, Bash, Git, Docker, Kubernetes, On-Premises and Azure (Azure Internal Load Balancer, Virtual Network), Ansible, Python, Chef Configuration Management (Cookbooks, Ruby Script).
 
 
-Role:  Senior DevOps Engineer						Duration: June 2019 – April 2021
+### Senior DevOps Engineer						Duration: June 2019 – April 2021
 
 Description: Responsible for automating CI/CD pipelines, monitoring the applications, and migrating the infrastructure and web applications to multi-cloud platforms (Azure, AWS, GCP, Converge Cloud). This includes managing the cloud infrastructure in order to sustain the system implementation process.
 Responsibilities:
@@ -114,7 +114,7 @@ Responsibilities:
 Environment: AWS, DevOps IaaS, PaaS, SaaS, Sre, Docker, Helm, Kubernetes, Jenkins, Puppet, CI/CD, Nexus, SCM, Ansible, SVN, Grafana, SCRUM, AGILE, GitHub, Chef, Cloud formation.
 
 
-Role: DevOps Engineer								Duration: March 2017 – May 2018
+### DevOps Engineer								Duration: March 2017 – May 2018
 
 Description: As a DevOps Engineer, I am responsible for migrating the on-premises infrastructure and web applications to multi-cloud environments and managing the CI/CD pipeline and monitoring the infrastructure.
 Responsibilities:
@@ -137,7 +137,7 @@ Environment: Ansible, Ant, Maven, Kubernetes, YAML, Puppet, CI/CD, Terraform, Li
 
 
 
-Role: Software Engineer							Duration: April 2016 – Feb 2017
+### Software Engineer							Duration: April 2016 – Feb 2017
 
 Description: To collaborate with Data Engineering, Data Science and other Software Engineering teams to implement infrastructure, host and maintain CI/ CD systems, automated testing systems and monitoring systems. The main objective is to embed development teams in a collaborative agile environment that encourages to perform at the best. Also applied my knowledge of CI/ CD as a DevOps Engineer to scale and grow our existing infrastructure.
 Responsibilities:
@@ -162,14 +162,15 @@ Bachelor of Technology, Electrical and Computer Engineering
 
 
 ## PROFESSIONAL SKILL SET:
-    Cloud Tools	          : Azure, AWS, GCP, Converge cloud, OpenStack CI /Build Tools	Jenkins, 
-    Rundeck Monitoring tools:	Splunk, Prometheus Virtualization tools	
-    VMware                  : ESX Server, vCenter, vSphere, Proxmox SCM Tools	GIT, SVN, CVS, Git, GitHub 
-    Containers	             : Docker, Kubernetes Configuration 
-    Management Tools	       : Chef, Puppet, Ansible 
-    Operating systems	    : Unix, Linux (Ubuntu, Debian, Red Hat (RHEL), Centos) and Windows. 
-    Databases	             : PostgreSQL, My SQL, MongoDB (No SQL). Scripting 
-    Languages	             : Python, Ruby, JavaScript, PHP, Shell Scripts, Bash, C, C++, shell.
+    Cloud Tools	              : Azure, AWS, GCP, Converge cloud, OpenStack CI /Build Tools	Jenkins, 
+    Rundeck Monitoring tools  :	Splunk, Prometheus Virtualization tools	
+    VMware                    : ESX Server, vCenter, vSphere, Proxmox 
+    SCM Tools                 : GIT, SVN, CVS, Git, GitHub 
+    Containers	              : Docker, Kubernetes Configuration 
+    Management Tools	        : Chef, Puppet, Ansible 
+    Operating systems	        : Unix, Linux (Ubuntu, Debian, Red Hat (RHEL), Centos) and Windows. 
+    Databases	                : PostgreSQL, My SQL, MongoDB (No SQL). Scripting 
+    Languages	                : Python, Ruby, JavaScript, PHP, Shell Scripts, Bash, C, C++, shell.
 
 
 ## ACADEMIC PROJECTS:
