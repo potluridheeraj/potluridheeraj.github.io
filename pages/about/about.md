@@ -93,7 +93,7 @@ Environment: Microsoft Azure, AWS, GCP, CI/CD (Jenkins, GitHub Actions, Docker, 
 
 ### Senior DevOps Engineer						Duration: June 2019 – April 2021
 
-Description: Responsible for automating CI/CD pipelines, monitoring the applications, and migrating the infrastructure and web applications to multi-cloud platforms (Azure, AWS, GCP, Converge Cloud). This includes managing the cloud infrastructure in order to sustain the system implementation process.      
+Description: Responsible for automating CI/CD pipelines, monitoring the applications, and migrating the infrastructure and web applications to multi-cloud platforms (Azure, AWS, GCP, Converge Cloud). This includes managing the cloud infrastructure in order to sustain the system implementation process.            
 
       
 Responsibilities:
@@ -120,7 +120,7 @@ Environment: AWS, DevOps IaaS, PaaS, SaaS, Sre, Docker, Helm, Kubernetes, Jenkin
 
 ### DevOps Engineer								Duration: March 2017 – May 2018
 
-Description: As a DevOps Engineer, I am responsible for migrating the on-premises infrastructure and web applications to multi-cloud environments and managing the CI/CD pipeline and monitoring the infrastructure.
+Description: As a DevOps Engineer, I am responsible for migrating the on-premises infrastructure and web applications to multi-cloud environments and managing the CI/CD pipeline and monitoring the infrastructure.      
       
 
       
@@ -146,7 +146,7 @@ Environment: Ansible, Ant, Maven, Kubernetes, YAML, Puppet, CI/CD, Terraform, Li
 
 ### Software Engineer							Duration: April 2016 – Feb 2017
 
-Description: To collaborate with Data Engineering, Data Science and other Software Engineering teams to implement infrastructure, host and maintain CI/ CD systems, automated testing systems and monitoring systems. The main objective is to embed development teams in a collaborative agile environment that encourages to perform at the best. Also applied my knowledge of CI/ CD as a DevOps Engineer to scale and grow our existing infrastructure.
+Description: To collaborate with Data Engineering, Data Science and other Software Engineering teams to implement infrastructure, host and maintain CI/ CD systems, automated testing systems and monitoring systems. The main objective is to embed development teams in a collaborative agile environment that encourages to perform at the best. Also applied my knowledge of CI/ CD as a DevOps Engineer to scale and grow our existing infrastructure.        
       
 
       
