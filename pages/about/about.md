@@ -13,11 +13,11 @@ Over 8 years of experience in a range of roles, including DevOps, Cloud Engineer
 
 ## Certifications:
 
-    ❖	Certified Kubernetes Administrator        
-    ❖	Azure DevOps Engineer Expert
-    ❖	Azure Administrator Associate
-    ❖	Microsoft Azure Fundaments
-    ❖	Certified Ethical Hacker
+   * Certified Kubernetes Administrator        
+   * Azure DevOps Engineer Expert
+   * Azure Administrator Associate
+   * Microsoft Azure Fundaments
+   * Certified Ethical Hacker
 
 Professional Summary:
 Over 8 years of experience in a range of roles, including DevOps, Cloud Engineer, Build and Release Engineer, with excellent skills in Software Integration, Configuration, Packaging, Building, Automating, Managing, and Releasing Code from One Environment to Another and Deploy to Servers, Support, and Maintenance under Unix/Linux Platforms.
