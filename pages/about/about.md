@@ -93,7 +93,9 @@ Environment: Microsoft Azure, AWS, GCP, CI/CD (Jenkins, GitHub Actions, Docker, 
 
 ### Senior DevOps Engineer						Duration: June 2019 – April 2021
 
-Description: Responsible for automating CI/CD pipelines, monitoring the applications, and migrating the infrastructure and web applications to multi-cloud platforms (Azure, AWS, GCP, Converge Cloud). This includes managing the cloud infrastructure in order to sustain the system implementation process.
+Description: Responsible for automating CI/CD pipelines, monitoring the applications, and migrating the infrastructure and web applications to multi-cloud platforms (Azure, AWS, GCP, Converge Cloud). This includes managing the cloud infrastructure in order to sustain the system implementation process.      
+
+      
 Responsibilities:
 * Implemented Terraform modules to facilitate application deployment across multiple cloud providers and to effectively manage the underlying infrastructure.
 * Participated in release planning and carried out the project team's request for a release build via a JIRA ticket.
@@ -119,6 +121,9 @@ Environment: AWS, DevOps IaaS, PaaS, SaaS, Sre, Docker, Helm, Kubernetes, Jenkin
 ### DevOps Engineer								Duration: March 2017 – May 2018
 
 Description: As a DevOps Engineer, I am responsible for migrating the on-premises infrastructure and web applications to multi-cloud environments and managing the CI/CD pipeline and monitoring the infrastructure.
+      
+
+      
 Responsibilities:
 * Worked with Docker container snapshots, attached to a running container, removed images, handled directory structures and containers in AWS ECS, and controlled Docker container clusters operated by Kubernetes.
 * Managed Kubernetes charts using Helm, created builds of the Kubernetes apps, templatize Kubernetes manifests, provide set of configuration parameters to customize the deployment and Managed releases of Helm packages. 
@@ -142,6 +147,9 @@ Environment: Ansible, Ant, Maven, Kubernetes, YAML, Puppet, CI/CD, Terraform, Li
 ### Software Engineer							Duration: April 2016 – Feb 2017
 
 Description: To collaborate with Data Engineering, Data Science and other Software Engineering teams to implement infrastructure, host and maintain CI/ CD systems, automated testing systems and monitoring systems. The main objective is to embed development teams in a collaborative agile environment that encourages to perform at the best. Also applied my knowledge of CI/ CD as a DevOps Engineer to scale and grow our existing infrastructure.
+      
+
+      
 Responsibilities:
 * Administration of GitHub tool includes creating branches, tagging, access permissions and setting up hooks locks.
 * Installation, Configuration and Administration of Jenkins over UNIX and LINUX build machines in distributed mode over Apache Tomcat and configured jobs along with various plug-in for Continuous Integration, Release Builds for AGILE and Production Branches.
