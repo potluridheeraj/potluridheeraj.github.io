@@ -1,4 +1,4 @@
-![image](https://github.com/potluridheeraj/potluridheeraj.github.io/assets/15670524/727286a9-d649-49e1-ac90-18868c980d0e)---
+---
 title: About
 keywords: about
 #summary: "DHEERAJ POTLURI"
